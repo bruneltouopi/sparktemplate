@@ -1,0 +1,910 @@
+00:15:17.874 [main] WARN  org.apache.spark.util.Utils - Your hostname, fabrice-GL552VW resolves to a loopback address: 127.0.1.1; using 192.168.1.67 instead (on interface wlp2s0)
+00:15:17.878 [main] WARN  org.apache.spark.util.Utils - Set SPARK_LOCAL_IP if you need to bind to another address
+00:15:18.118 [main] INFO  org.apache.spark.SparkContext - Running Spark version 2.4.0
+00:15:18.310 [main] WARN  o.a.hadoop.util.NativeCodeLoader - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+00:15:18.418 [main] INFO  org.apache.spark.SparkContext - Submitted application: spark session example
+00:15:18.470 [main] INFO  org.apache.spark.SecurityManager - Changing view acls to: fabrice
+00:15:18.470 [main] INFO  org.apache.spark.SecurityManager - Changing modify acls to: fabrice
+00:15:18.471 [main] INFO  org.apache.spark.SecurityManager - Changing view acls groups to: 
+00:15:18.471 [main] INFO  org.apache.spark.SecurityManager - Changing modify acls groups to: 
+00:15:18.471 [main] INFO  org.apache.spark.SecurityManager - SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(fabrice); groups with view permissions: Set(); users  with modify permissions: Set(fabrice); groups with modify permissions: Set()
+00:15:18.693 [main] INFO  org.apache.spark.util.Utils - Successfully started service 'sparkDriver' on port 37873.
+00:15:18.714 [main] INFO  org.apache.spark.SparkEnv - Registering MapOutputTracker
+00:15:18.732 [main] INFO  org.apache.spark.SparkEnv - Registering BlockManagerMaster
+00:15:18.734 [main] INFO  o.a.s.s.BlockManagerMasterEndpoint - Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+00:15:18.735 [main] INFO  o.a.s.s.BlockManagerMasterEndpoint - BlockManagerMasterEndpoint up
+00:15:18.754 [main] INFO  o.a.spark.storage.DiskBlockManager - Created local directory at /tmp/blockmgr-95a08187-a9e2-461d-aa78-0fa680c7f315
+00:15:18.777 [main] INFO  o.a.spark.storage.memory.MemoryStore - MemoryStore started with capacity 1929.9 MB
+00:15:18.790 [main] INFO  org.apache.spark.SparkEnv - Registering OutputCommitCoordinator
+00:15:18.858 [main] INFO  org.spark_project.jetty.util.log - Logging initialized @2190ms
+00:15:18.902 [main] INFO  o.spark_project.jetty.server.Server - jetty-9.3.z-SNAPSHOT, build timestamp: unknown, git hash: unknown
+00:15:18.914 [main] INFO  o.spark_project.jetty.server.Server - Started @2247ms
+00:15:18.929 [main] INFO  o.s.jetty.server.AbstractConnector - Started ServerConnector@7af5d740{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+00:15:18.929 [main] INFO  org.apache.spark.util.Utils - Successfully started service 'SparkUI' on port 4040.
+00:15:18.950 [main] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@4fbdc0f0{/jobs,null,AVAILABLE,@Spark}
+00:15:18.951 [main] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@5d8445d7{/jobs/json,null,AVAILABLE,@Spark}
+00:15:18.951 [main] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@37d80fe7{/jobs/job,null,AVAILABLE,@Spark}
+00:15:18.952 [main] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@e3cee7b{/jobs/job/json,null,AVAILABLE,@Spark}
+00:15:18.953 [main] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@71e9a896{/stages,null,AVAILABLE,@Spark}
+00:15:18.954 [main] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@6b9267b{/stages/json,null,AVAILABLE,@Spark}
+00:15:18.954 [main] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@408b35bf{/stages/stage,null,AVAILABLE,@Spark}
+00:15:18.956 [main] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@5af9926a{/stages/stage/json,null,AVAILABLE,@Spark}
+00:15:18.957 [main] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@43c67247{/stages/pool,null,AVAILABLE,@Spark}
+00:15:18.958 [main] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@fac80{/stages/pool/json,null,AVAILABLE,@Spark}
+00:15:18.959 [main] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@726386ed{/storage,null,AVAILABLE,@Spark}
+00:15:18.959 [main] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@649f2009{/storage/json,null,AVAILABLE,@Spark}
+00:15:18.960 [main] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@14bb2297{/storage/rdd,null,AVAILABLE,@Spark}
+00:15:18.961 [main] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@69adf72c{/storage/rdd/json,null,AVAILABLE,@Spark}
+00:15:18.962 [main] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@797501a{/environment,null,AVAILABLE,@Spark}
+00:15:18.962 [main] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@1a15b789{/environment/json,null,AVAILABLE,@Spark}
+00:15:18.963 [main] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@57f791c6{/executors,null,AVAILABLE,@Spark}
+00:15:18.964 [main] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@51650883{/executors/json,null,AVAILABLE,@Spark}
+00:15:18.964 [main] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@6c4f9535{/executors/threadDump,null,AVAILABLE,@Spark}
+00:15:18.965 [main] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@5bd1ceca{/executors/threadDump/json,null,AVAILABLE,@Spark}
+00:15:18.970 [main] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@30c31dd7{/static,null,AVAILABLE,@Spark}
+00:15:18.971 [main] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@750fe12e{/,null,AVAILABLE,@Spark}
+00:15:18.972 [main] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@f8908f6{/api,null,AVAILABLE,@Spark}
+00:15:18.973 [main] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@63fd4873{/jobs/job/kill,null,AVAILABLE,@Spark}
+00:15:18.974 [main] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@1e11bc55{/stages/stage/kill,null,AVAILABLE,@Spark}
+00:15:18.976 [main] INFO  org.apache.spark.ui.SparkUI - Bound SparkUI to 0.0.0.0, and started at http://192.168.1.67:4040
+00:15:19.029 [main] INFO  org.apache.spark.executor.Executor - Starting executor ID driver on host localhost
+00:15:19.080 [main] INFO  org.apache.spark.util.Utils - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 38259.
+00:15:19.081 [main] INFO  o.a.s.n.n.NettyBlockTransferService - Server created on 192.168.1.67:38259
+00:15:19.082 [main] INFO  o.apache.spark.storage.BlockManager - Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+00:15:19.099 [main] INFO  o.a.spark.storage.BlockManagerMaster - Registering BlockManager BlockManagerId(driver, 192.168.1.67, 38259, None)
+00:15:19.103 [dispatcher-event-loop-2] INFO  o.a.s.s.BlockManagerMasterEndpoint - Registering block manager 192.168.1.67:38259 with 1929.9 MB RAM, BlockManagerId(driver, 192.168.1.67, 38259, None)
+00:15:19.105 [main] INFO  o.a.spark.storage.BlockManagerMaster - Registered BlockManager BlockManagerId(driver, 192.168.1.67, 38259, None)
+00:15:19.105 [main] INFO  o.apache.spark.storage.BlockManager - Initialized BlockManager: BlockManagerId(driver, 192.168.1.67, 38259, None)
+00:15:19.276 [main] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@7c2327fa{/metrics/json,null,AVAILABLE,@Spark}
+00:15:19.309 [main] INFO  com.spark.examples.gradle.SparkInit - Csv input file :/home/fabrice/workspace/sparkexamples/gradle.template/build/resources/main/test.csv
+00:15:19.309 [main] INFO  com.spark.examples.gradle.SparkInit - Output json :/home/fabrice/Documents/jsonOut
+00:15:19.333 [main] INFO  o.a.spark.sql.internal.SharedState - Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('/home/fabrice/workspace/sparkexamples/gradle.template/spark-warehouse').
+00:15:19.333 [main] INFO  o.a.spark.sql.internal.SharedState - Warehouse path is '/home/fabrice/workspace/sparkexamples/gradle.template/spark-warehouse'.
+00:15:19.341 [main] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@55ea2d70{/SQL,null,AVAILABLE,@Spark}
+00:15:19.341 [main] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@5e742e4{/SQL/json,null,AVAILABLE,@Spark}
+00:15:19.342 [main] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@71c905a3{/SQL/execution,null,AVAILABLE,@Spark}
+00:15:19.342 [main] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@30af7377{/SQL/execution/json,null,AVAILABLE,@Spark}
+00:15:19.343 [main] INFO  o.s.j.server.handler.ContextHandler - Started o.s.j.s.ServletContextHandler@afb5821{/static/sql,null,AVAILABLE,@Spark}
+00:15:19.805 [main] INFO  o.a.s.s.e.s.s.StateStoreCoordinatorRef - Registered StateStoreCoordinator endpoint
+00:15:21.546 [main] INFO  o.a.s.s.e.d.FileSourceStrategy - Pruning directories with: 
+00:15:21.548 [main] INFO  o.a.s.s.e.d.FileSourceStrategy - Post-Scan Filters: (length(trim(value#0, None)) > 0)
+00:15:21.551 [main] INFO  o.a.s.s.e.d.FileSourceStrategy - Output Data Schema: struct<value: string>
+00:15:21.558 [main] INFO  o.a.s.s.execution.FileSourceScanExec - Pushed Filters: 
+00:15:21.825 [main] INFO  o.a.s.s.c.e.codegen.CodeGenerator - Code generated in 145.505063 ms
+00:15:22.061 [main] INFO  o.a.s.s.c.e.codegen.CodeGenerator - Code generated in 18.800951 ms
+00:15:22.127 [main] INFO  o.a.spark.storage.memory.MemoryStore - Block broadcast_0 stored as values in memory (estimated size 224.7 KB, free 1929.7 MB)
+00:15:22.165 [main] INFO  o.a.spark.storage.memory.MemoryStore - Block broadcast_0_piece0 stored as bytes in memory (estimated size 20.7 KB, free 1929.7 MB)
+00:15:22.167 [dispatcher-event-loop-5] INFO  o.a.spark.storage.BlockManagerInfo - Added broadcast_0_piece0 in memory on 192.168.1.67:38259 (size: 20.7 KB, free: 1929.9 MB)
+00:15:22.169 [main] INFO  org.apache.spark.SparkContext - Created broadcast 0 from csv at SparkInit.java:39
+00:15:22.174 [main] INFO  o.a.s.s.execution.FileSourceScanExec - Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+00:15:22.291 [main] INFO  org.apache.spark.SparkContext - Starting job: csv at SparkInit.java:39
+00:15:22.313 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - Got job 0 (csv at SparkInit.java:39) with 1 output partitions
+00:15:22.314 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - Final stage: ResultStage 0 (csv at SparkInit.java:39)
+00:15:22.314 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - Parents of final stage: List()
+00:15:22.316 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - Missing parents: List()
+00:15:22.320 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - Submitting ResultStage 0 (MapPartitionsRDD[3] at csv at SparkInit.java:39), which has no missing parents
+00:15:22.385 [dag-scheduler-event-loop] INFO  o.a.spark.storage.memory.MemoryStore - Block broadcast_1 stored as values in memory (estimated size 10.2 KB, free 1929.7 MB)
+00:15:22.387 [dag-scheduler-event-loop] INFO  o.a.spark.storage.memory.MemoryStore - Block broadcast_1_piece0 stored as bytes in memory (estimated size 5.0 KB, free 1929.6 MB)
+00:15:22.388 [dispatcher-event-loop-6] INFO  o.a.spark.storage.BlockManagerInfo - Added broadcast_1_piece0 in memory on 192.168.1.67:38259 (size: 5.0 KB, free: 1929.9 MB)
+00:15:22.389 [dag-scheduler-event-loop] INFO  org.apache.spark.SparkContext - Created broadcast 1 from broadcast at DAGScheduler.scala:1161
+00:15:22.400 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[3] at csv at SparkInit.java:39) (first 15 tasks are for partitions Vector(0))
+00:15:22.401 [dag-scheduler-event-loop] INFO  o.a.s.scheduler.TaskSchedulerImpl - Adding task set 0.0 with 1 tasks
+00:15:22.448 [dispatcher-event-loop-7] INFO  o.a.spark.scheduler.TaskSetManager - Starting task 0.0 in stage 0.0 (TID 0, localhost, executor driver, partition 0, PROCESS_LOCAL, 7847 bytes)
+00:15:22.457 [Executor task launch worker for task 0] INFO  org.apache.spark.executor.Executor - Running task 0.0 in stage 0.0 (TID 0)
+00:15:22.680 [Executor task launch worker for task 0] INFO  o.a.s.s.e.datasources.FileScanRDD - Reading File path: file:///home/fabrice/workspace/sparkexamples/gradle.template/build/resources/main/test.csv, range: 0-121306, partition values: [empty row]
+00:15:22.693 [Executor task launch worker for task 0] INFO  o.a.s.s.c.e.codegen.CodeGenerator - Code generated in 7.983023 ms
+00:15:22.725 [Executor task launch worker for task 0] INFO  org.apache.spark.executor.Executor - Finished task 0.0 in stage 0.0 (TID 0). 1351 bytes result sent to driver
+00:15:22.731 [task-result-getter-0] INFO  o.a.spark.scheduler.TaskSetManager - Finished task 0.0 in stage 0.0 (TID 0) in 300 ms on localhost (executor driver) (1/1)
+00:15:22.733 [task-result-getter-0] INFO  o.a.s.scheduler.TaskSchedulerImpl - Removed TaskSet 0.0, whose tasks have all completed, from pool 
+00:15:22.740 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - ResultStage 0 (csv at SparkInit.java:39) finished in 0.406 s
+00:15:22.744 [main] INFO  o.a.spark.scheduler.DAGScheduler - Job 0 finished: csv at SparkInit.java:39, took 0.452808 s
+00:15:22.797 [main] INFO  o.a.s.s.e.d.FileSourceStrategy - Pruning directories with: 
+00:15:22.798 [main] INFO  o.a.s.s.e.d.FileSourceStrategy - Post-Scan Filters: 
+00:15:22.798 [main] INFO  o.a.s.s.e.d.FileSourceStrategy - Output Data Schema: struct<value: string>
+00:15:22.798 [main] INFO  o.a.s.s.execution.FileSourceScanExec - Pushed Filters: 
+00:15:22.813 [main] INFO  o.a.s.s.c.e.codegen.CodeGenerator - Code generated in 10.236932 ms
+00:15:22.833 [main] INFO  o.a.spark.storage.memory.MemoryStore - Block broadcast_2 stored as values in memory (estimated size 224.7 KB, free 1929.4 MB)
+00:15:22.844 [main] INFO  o.a.spark.storage.memory.MemoryStore - Block broadcast_2_piece0 stored as bytes in memory (estimated size 20.7 KB, free 1929.4 MB)
+00:15:22.845 [dispatcher-event-loop-2] INFO  o.a.spark.storage.BlockManagerInfo - Added broadcast_2_piece0 in memory on 192.168.1.67:38259 (size: 20.7 KB, free: 1929.9 MB)
+00:15:22.846 [main] INFO  org.apache.spark.SparkContext - Created broadcast 2 from csv at SparkInit.java:39
+00:15:22.846 [main] INFO  o.a.s.s.execution.FileSourceScanExec - Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+00:15:22.946 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 17
+00:15:22.946 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 5
+00:15:22.946 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 9
+00:15:22.946 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 14
+00:15:22.946 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 6
+00:15:22.946 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 26
+00:15:22.946 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 30
+00:15:22.946 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 34
+00:15:22.961 [dispatcher-event-loop-5] INFO  o.a.spark.storage.BlockManagerInfo - Removed broadcast_2_piece0 on 192.168.1.67:38259 in memory (size: 20.7 KB, free: 1929.9 MB)
+00:15:22.966 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 25
+00:15:22.966 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 24
+00:15:22.966 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 35
+00:15:22.966 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 13
+00:15:22.966 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 20
+00:15:22.966 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 33
+00:15:22.966 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 1
+00:15:22.966 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 15
+00:15:22.967 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 29
+00:15:22.967 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 18
+00:15:22.967 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 3
+00:15:22.967 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 7
+00:15:22.967 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 11
+00:15:22.967 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 28
+00:15:22.967 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 4
+00:15:22.967 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 10
+00:15:22.969 [dispatcher-event-loop-0] INFO  o.a.spark.storage.BlockManagerInfo - Removed broadcast_1_piece0 on 192.168.1.67:38259 in memory (size: 5.0 KB, free: 1929.9 MB)
+00:15:22.976 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 19
+00:15:22.976 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 16
+00:15:22.976 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 2
+00:15:22.977 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 23
+00:15:22.978 [dispatcher-event-loop-3] INFO  o.a.spark.storage.BlockManagerInfo - Removed broadcast_0_piece0 on 192.168.1.67:38259 in memory (size: 20.7 KB, free: 1929.9 MB)
+00:15:22.980 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 12
+00:15:22.980 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 32
+00:15:22.980 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 0
+00:15:22.980 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 27
+00:15:22.980 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 21
+00:15:22.980 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 31
+00:15:22.980 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 22
+00:15:22.980 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 8
+00:15:22.988 [main] INFO  o.a.s.s.e.d.FileSourceStrategy - Pruning directories with: 
+00:15:22.989 [main] INFO  o.a.s.s.e.d.FileSourceStrategy - Post-Scan Filters: 
+00:15:22.990 [main] INFO  o.a.s.s.e.d.FileSourceStrategy - Output Data Schema: struct<>
+00:15:22.990 [main] INFO  o.a.s.s.execution.FileSourceScanExec - Pushed Filters: 
+00:15:23.038 [main] INFO  o.a.s.s.c.e.codegen.CodeGenerator - Code generated in 11.479591 ms
+00:15:23.055 [main] INFO  o.a.s.s.c.e.codegen.CodeGenerator - Code generated in 10.918832 ms
+00:15:23.072 [main] INFO  o.a.spark.storage.memory.MemoryStore - Block broadcast_3 stored as values in memory (estimated size 224.7 KB, free 1929.7 MB)
+00:15:23.080 [main] INFO  o.a.spark.storage.memory.MemoryStore - Block broadcast_3_piece0 stored as bytes in memory (estimated size 20.7 KB, free 1929.7 MB)
+00:15:23.080 [dispatcher-event-loop-4] INFO  o.a.spark.storage.BlockManagerInfo - Added broadcast_3_piece0 in memory on 192.168.1.67:38259 (size: 20.7 KB, free: 1929.9 MB)
+00:15:23.081 [main] INFO  org.apache.spark.SparkContext - Created broadcast 3 from count at SparkInit.java:40
+00:15:23.083 [main] INFO  o.a.s.s.execution.FileSourceScanExec - Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+00:15:23.116 [main] INFO  org.apache.spark.SparkContext - Starting job: count at SparkInit.java:40
+00:15:23.119 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - Registering RDD 11 (count at SparkInit.java:40)
+00:15:23.121 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - Got job 1 (count at SparkInit.java:40) with 1 output partitions
+00:15:23.121 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - Final stage: ResultStage 2 (count at SparkInit.java:40)
+00:15:23.121 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - Parents of final stage: List(ShuffleMapStage 1)
+00:15:23.122 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - Missing parents: List(ShuffleMapStage 1)
+00:15:23.123 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - Submitting ShuffleMapStage 1 (MapPartitionsRDD[11] at count at SparkInit.java:40), which has no missing parents
+00:15:23.147 [dag-scheduler-event-loop] INFO  o.a.spark.storage.memory.MemoryStore - Block broadcast_4 stored as values in memory (estimated size 13.6 KB, free 1929.6 MB)
+00:15:23.149 [dag-scheduler-event-loop] INFO  o.a.spark.storage.memory.MemoryStore - Block broadcast_4_piece0 stored as bytes in memory (estimated size 7.1 KB, free 1929.6 MB)
+00:15:23.150 [dispatcher-event-loop-5] INFO  o.a.spark.storage.BlockManagerInfo - Added broadcast_4_piece0 in memory on 192.168.1.67:38259 (size: 7.1 KB, free: 1929.9 MB)
+00:15:23.150 [dag-scheduler-event-loop] INFO  org.apache.spark.SparkContext - Created broadcast 4 from broadcast at DAGScheduler.scala:1161
+00:15:23.153 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - Submitting 1 missing tasks from ShuffleMapStage 1 (MapPartitionsRDD[11] at count at SparkInit.java:40) (first 15 tasks are for partitions Vector(0))
+00:15:23.153 [dag-scheduler-event-loop] INFO  o.a.s.scheduler.TaskSchedulerImpl - Adding task set 1.0 with 1 tasks
+00:15:23.156 [dispatcher-event-loop-7] INFO  o.a.spark.scheduler.TaskSetManager - Starting task 0.0 in stage 1.0 (TID 1, localhost, executor driver, partition 0, PROCESS_LOCAL, 7836 bytes)
+00:15:23.157 [Executor task launch worker for task 1] INFO  org.apache.spark.executor.Executor - Running task 0.0 in stage 1.0 (TID 1)
+00:15:23.183 [Executor task launch worker for task 1] INFO  o.a.s.s.e.datasources.FileScanRDD - Reading File path: file:///home/fabrice/workspace/sparkexamples/gradle.template/build/resources/main/test.csv, range: 0-121306, partition values: [empty row]
+00:15:23.191 [Executor task launch worker for task 1] INFO  o.a.s.s.c.e.codegen.CodeGenerator - Code generated in 7.142802 ms
+00:15:23.238 [Executor task launch worker for task 1] INFO  org.apache.spark.executor.Executor - Finished task 0.0 in stage 1.0 (TID 1). 1598 bytes result sent to driver
+00:15:23.240 [task-result-getter-1] INFO  o.a.spark.scheduler.TaskSetManager - Finished task 0.0 in stage 1.0 (TID 1) in 85 ms on localhost (executor driver) (1/1)
+00:15:23.241 [task-result-getter-1] INFO  o.a.s.scheduler.TaskSchedulerImpl - Removed TaskSet 1.0, whose tasks have all completed, from pool 
+00:15:23.242 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - ShuffleMapStage 1 (count at SparkInit.java:40) finished in 0.115 s
+00:15:23.242 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - looking for newly runnable stages
+00:15:23.243 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - running: Set()
+00:15:23.243 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - waiting: Set(ResultStage 2)
+00:15:23.243 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - failed: Set()
+00:15:23.246 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - Submitting ResultStage 2 (MapPartitionsRDD[14] at count at SparkInit.java:40), which has no missing parents
+00:15:23.253 [dag-scheduler-event-loop] INFO  o.a.spark.storage.memory.MemoryStore - Block broadcast_5 stored as values in memory (estimated size 8.5 KB, free 1929.6 MB)
+00:15:23.254 [dag-scheduler-event-loop] INFO  o.a.spark.storage.memory.MemoryStore - Block broadcast_5_piece0 stored as bytes in memory (estimated size 4.4 KB, free 1929.6 MB)
+00:15:23.255 [dispatcher-event-loop-2] INFO  o.a.spark.storage.BlockManagerInfo - Added broadcast_5_piece0 in memory on 192.168.1.67:38259 (size: 4.4 KB, free: 1929.9 MB)
+00:15:23.255 [dag-scheduler-event-loop] INFO  org.apache.spark.SparkContext - Created broadcast 5 from broadcast at DAGScheduler.scala:1161
+00:15:23.256 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - Submitting 1 missing tasks from ResultStage 2 (MapPartitionsRDD[14] at count at SparkInit.java:40) (first 15 tasks are for partitions Vector(0))
+00:15:23.256 [dag-scheduler-event-loop] INFO  o.a.s.scheduler.TaskSchedulerImpl - Adding task set 2.0 with 1 tasks
+00:15:23.260 [dispatcher-event-loop-1] INFO  o.a.spark.scheduler.TaskSetManager - Starting task 0.0 in stage 2.0 (TID 2, localhost, executor driver, partition 0, ANY, 7246 bytes)
+00:15:23.260 [Executor task launch worker for task 2] INFO  org.apache.spark.executor.Executor - Running task 0.0 in stage 2.0 (TID 2)
+00:15:23.278 [Executor task launch worker for task 2] INFO  o.a.s.s.ShuffleBlockFetcherIterator - Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+00:15:23.279 [Executor task launch worker for task 2] INFO  o.a.s.s.ShuffleBlockFetcherIterator - Started 0 remote fetches in 3 ms
+00:15:23.297 [Executor task launch worker for task 2] INFO  org.apache.spark.executor.Executor - Finished task 0.0 in stage 2.0 (TID 2). 1792 bytes result sent to driver
+00:15:23.298 [task-result-getter-2] INFO  o.a.spark.scheduler.TaskSetManager - Finished task 0.0 in stage 2.0 (TID 2) in 39 ms on localhost (executor driver) (1/1)
+00:15:23.298 [task-result-getter-2] INFO  o.a.s.scheduler.TaskSchedulerImpl - Removed TaskSet 2.0, whose tasks have all completed, from pool 
+00:15:23.299 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - ResultStage 2 (count at SparkInit.java:40) finished in 0.048 s
+00:15:23.300 [main] INFO  o.a.spark.scheduler.DAGScheduler - Job 1 finished: count at SparkInit.java:40, took 0.184451 s
+00:15:23.303 [main] INFO  com.spark.examples.gradle.SparkInit - record load fom csv :999
+00:15:23.355 [main] INFO  o.a.s.s.e.d.FileSourceStrategy - Pruning directories with: 
+00:15:23.355 [main] INFO  o.a.s.s.e.d.FileSourceStrategy - Post-Scan Filters: 
+00:15:23.356 [main] INFO  o.a.s.s.e.d.FileSourceStrategy - Output Data Schema: struct<1: string, Eldon Base for stackable storage shelf, platinum: string, Muhammed MacIntyre: string, 3: string, -213.25: string ... 8 more fields>
+00:15:23.356 [main] INFO  o.a.s.s.execution.FileSourceScanExec - Pushed Filters: 
+00:15:23.418 [main] INFO  o.a.s.s.e.d.SQLHadoopMapReduceCommitProtocol - Using output committer class org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+00:15:23.443 [main] INFO  o.a.spark.storage.memory.MemoryStore - Block broadcast_6 stored as values in memory (estimated size 224.7 KB, free 1929.4 MB)
+00:15:23.454 [main] INFO  o.a.spark.storage.memory.MemoryStore - Block broadcast_6_piece0 stored as bytes in memory (estimated size 20.7 KB, free 1929.4 MB)
+00:15:23.454 [dispatcher-event-loop-5] INFO  o.a.spark.storage.BlockManagerInfo - Added broadcast_6_piece0 in memory on 192.168.1.67:38259 (size: 20.7 KB, free: 1929.8 MB)
+00:15:23.455 [main] INFO  org.apache.spark.SparkContext - Created broadcast 6 from json at SparkInit.java:41
+00:15:23.456 [main] INFO  o.a.s.s.execution.FileSourceScanExec - Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+00:15:23.484 [main] INFO  org.apache.spark.SparkContext - Starting job: json at SparkInit.java:41
+00:15:23.485 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - Got job 2 (json at SparkInit.java:41) with 1 output partitions
+00:15:23.485 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - Final stage: ResultStage 3 (json at SparkInit.java:41)
+00:15:23.485 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - Parents of final stage: List()
+00:15:23.485 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - Missing parents: List()
+00:15:23.486 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - Submitting ResultStage 3 (MapPartitionsRDD[16] at json at SparkInit.java:41), which has no missing parents
+00:15:23.500 [dag-scheduler-event-loop] INFO  o.a.spark.storage.memory.MemoryStore - Block broadcast_7 stored as values in memory (estimated size 136.6 KB, free 1929.3 MB)
+00:15:23.502 [dag-scheduler-event-loop] INFO  o.a.spark.storage.memory.MemoryStore - Block broadcast_7_piece0 stored as bytes in memory (estimated size 49.7 KB, free 1929.2 MB)
+00:15:23.502 [dispatcher-event-loop-7] INFO  o.a.spark.storage.BlockManagerInfo - Added broadcast_7_piece0 in memory on 192.168.1.67:38259 (size: 49.7 KB, free: 1929.8 MB)
+00:15:23.503 [dag-scheduler-event-loop] INFO  org.apache.spark.SparkContext - Created broadcast 7 from broadcast at DAGScheduler.scala:1161
+00:15:23.503 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - Submitting 1 missing tasks from ResultStage 3 (MapPartitionsRDD[16] at json at SparkInit.java:41) (first 15 tasks are for partitions Vector(0))
+00:15:23.503 [dag-scheduler-event-loop] INFO  o.a.s.scheduler.TaskSchedulerImpl - Adding task set 3.0 with 1 tasks
+00:15:23.504 [dispatcher-event-loop-6] INFO  o.a.spark.scheduler.TaskSetManager - Starting task 0.0 in stage 3.0 (TID 3, localhost, executor driver, partition 0, PROCESS_LOCAL, 7847 bytes)
+00:15:23.505 [Executor task launch worker for task 3] INFO  org.apache.spark.executor.Executor - Running task 0.0 in stage 3.0 (TID 3)
+00:15:23.536 [Executor task launch worker for task 3] INFO  o.a.s.s.e.d.SQLHadoopMapReduceCommitProtocol - Using output committer class org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+00:15:23.554 [Executor task launch worker for task 3] INFO  o.a.s.s.e.datasources.FileScanRDD - Reading File path: file:///home/fabrice/workspace/sparkexamples/gradle.template/build/resources/main/test.csv, range: 0-121306, partition values: [empty row]
+00:15:23.577 [Executor task launch worker for task 3] INFO  o.a.s.s.c.e.codegen.CodeGenerator - Code generated in 18.128383 ms
+00:15:23.670 [Executor task launch worker for task 3] INFO  o.a.h.m.l.output.FileOutputCommitter - Saved output of task 'attempt_20190313001523_0003_m_000000_0' to file:/home/fabrice/Documents/jsonOut/_temporary/0/task_20190313001523_0003_m_000000
+00:15:23.670 [Executor task launch worker for task 3] INFO  o.a.s.mapred.SparkHadoopMapRedUtil - attempt_20190313001523_0003_m_000000_0: Committed
+00:15:23.675 [Executor task launch worker for task 3] INFO  org.apache.spark.executor.Executor - Finished task 0.0 in stage 3.0 (TID 3). 2169 bytes result sent to driver
+00:15:23.676 [task-result-getter-3] INFO  o.a.spark.scheduler.TaskSetManager - Finished task 0.0 in stage 3.0 (TID 3) in 172 ms on localhost (executor driver) (1/1)
+00:15:23.677 [task-result-getter-3] INFO  o.a.s.scheduler.TaskSchedulerImpl - Removed TaskSet 3.0, whose tasks have all completed, from pool 
+00:15:23.677 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - ResultStage 3 (json at SparkInit.java:41) finished in 0.190 s
+00:15:23.677 [main] INFO  o.a.spark.scheduler.DAGScheduler - Job 2 finished: json at SparkInit.java:41, took 0.193501 s
+00:15:23.687 [main] INFO  o.a.s.s.e.d.FileFormatWriter - Write Job a6c80bcb-08eb-4021-8328-dbe64affd748 committed.
+00:15:23.689 [main] INFO  o.a.s.s.e.d.FileFormatWriter - Finished processing stats for write job a6c80bcb-08eb-4021-8328-dbe64affd748.
+00:15:23.955 [main] INFO  o.a.s.s.c.e.codegen.CodeGenerator - Code generated in 8.09612 ms
+00:15:23.968 [main] INFO  org.apache.spark.SparkContext - Starting job: count at SparkInit.java:51
+00:15:23.969 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - Registering RDD 20 (count at SparkInit.java:51)
+00:15:23.969 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - Got job 3 (count at SparkInit.java:51) with 1 output partitions
+00:15:23.969 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - Final stage: ResultStage 5 (count at SparkInit.java:51)
+00:15:23.969 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - Parents of final stage: List(ShuffleMapStage 4)
+00:15:23.969 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - Missing parents: List(ShuffleMapStage 4)
+00:15:23.970 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - Submitting ShuffleMapStage 4 (MapPartitionsRDD[20] at count at SparkInit.java:51), which has no missing parents
+00:15:23.975 [dag-scheduler-event-loop] INFO  o.a.spark.storage.memory.MemoryStore - Block broadcast_8 stored as values in memory (estimated size 10.5 KB, free 1929.2 MB)
+00:15:23.977 [dag-scheduler-event-loop] INFO  o.a.spark.storage.memory.MemoryStore - Block broadcast_8_piece0 stored as bytes in memory (estimated size 5.5 KB, free 1929.2 MB)
+00:15:23.977 [dispatcher-event-loop-3] INFO  o.a.spark.storage.BlockManagerInfo - Added broadcast_8_piece0 in memory on 192.168.1.67:38259 (size: 5.5 KB, free: 1929.8 MB)
+00:15:23.978 [dag-scheduler-event-loop] INFO  org.apache.spark.SparkContext - Created broadcast 8 from broadcast at DAGScheduler.scala:1161
+00:15:23.978 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - Submitting 1 missing tasks from ShuffleMapStage 4 (MapPartitionsRDD[20] at count at SparkInit.java:51) (first 15 tasks are for partitions Vector(0))
+00:15:23.978 [dag-scheduler-event-loop] INFO  o.a.s.scheduler.TaskSchedulerImpl - Adding task set 4.0 with 1 tasks
+00:15:23.979 [dispatcher-event-loop-4] INFO  o.a.spark.scheduler.TaskSetManager - Starting task 0.0 in stage 4.0 (TID 4, localhost, executor driver, partition 0, PROCESS_LOCAL, 7158 bytes)
+00:15:23.979 [Executor task launch worker for task 4] INFO  org.apache.spark.executor.Executor - Running task 0.0 in stage 4.0 (TID 4)
+00:15:24.009 [Executor task launch worker for task 4] INFO  o.a.s.s.e.datasources.jdbc.JDBCRDD - closed connection
+00:15:24.011 [Executor task launch worker for task 4] INFO  org.apache.spark.executor.Executor - Finished task 0.0 in stage 4.0 (TID 4). 1512 bytes result sent to driver
+00:15:24.012 [task-result-getter-0] INFO  o.a.spark.scheduler.TaskSetManager - Finished task 0.0 in stage 4.0 (TID 4) in 33 ms on localhost (executor driver) (1/1)
+00:15:24.012 [task-result-getter-0] INFO  o.a.s.scheduler.TaskSchedulerImpl - Removed TaskSet 4.0, whose tasks have all completed, from pool 
+00:15:24.013 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - ShuffleMapStage 4 (count at SparkInit.java:51) finished in 0.041 s
+00:15:24.013 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - looking for newly runnable stages
+00:15:24.013 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - running: Set()
+00:15:24.013 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - waiting: Set(ResultStage 5)
+00:15:24.013 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - failed: Set()
+00:15:24.013 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - Submitting ResultStage 5 (MapPartitionsRDD[23] at count at SparkInit.java:51), which has no missing parents
+00:15:24.015 [dag-scheduler-event-loop] INFO  o.a.spark.storage.memory.MemoryStore - Block broadcast_9 stored as values in memory (estimated size 8.5 KB, free 1929.2 MB)
+00:15:24.017 [dag-scheduler-event-loop] INFO  o.a.spark.storage.memory.MemoryStore - Block broadcast_9_piece0 stored as bytes in memory (estimated size 4.4 KB, free 1929.2 MB)
+00:15:24.017 [dispatcher-event-loop-6] INFO  o.a.spark.storage.BlockManagerInfo - Added broadcast_9_piece0 in memory on 192.168.1.67:38259 (size: 4.4 KB, free: 1929.8 MB)
+00:15:24.018 [dag-scheduler-event-loop] INFO  org.apache.spark.SparkContext - Created broadcast 9 from broadcast at DAGScheduler.scala:1161
+00:15:24.018 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - Submitting 1 missing tasks from ResultStage 5 (MapPartitionsRDD[23] at count at SparkInit.java:51) (first 15 tasks are for partitions Vector(0))
+00:15:24.018 [dag-scheduler-event-loop] INFO  o.a.s.scheduler.TaskSchedulerImpl - Adding task set 5.0 with 1 tasks
+00:15:24.019 [dispatcher-event-loop-0] INFO  o.a.spark.scheduler.TaskSetManager - Starting task 0.0 in stage 5.0 (TID 5, localhost, executor driver, partition 0, ANY, 7246 bytes)
+00:15:24.019 [Executor task launch worker for task 5] INFO  org.apache.spark.executor.Executor - Running task 0.0 in stage 5.0 (TID 5)
+00:15:24.022 [Executor task launch worker for task 5] INFO  o.a.s.s.ShuffleBlockFetcherIterator - Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+00:15:24.022 [Executor task launch worker for task 5] INFO  o.a.s.s.ShuffleBlockFetcherIterator - Started 0 remote fetches in 0 ms
+00:15:24.024 [Executor task launch worker for task 5] INFO  org.apache.spark.executor.Executor - Finished task 0.0 in stage 5.0 (TID 5). 1749 bytes result sent to driver
+00:15:24.025 [task-result-getter-1] INFO  o.a.spark.scheduler.TaskSetManager - Finished task 0.0 in stage 5.0 (TID 5) in 5 ms on localhost (executor driver) (1/1)
+00:15:24.025 [task-result-getter-1] INFO  o.a.s.scheduler.TaskSchedulerImpl - Removed TaskSet 5.0, whose tasks have all completed, from pool 
+00:15:24.025 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - ResultStage 5 (count at SparkInit.java:51) finished in 0.011 s
+00:15:24.026 [main] INFO  o.a.spark.scheduler.DAGScheduler - Job 3 finished: count at SparkInit.java:51, took 0.057960 s
+00:15:24.027 [main] INFO  com.spark.examples.gradle.SparkInit - record load fom jdbc : 4
+00:15:24.027 [main] INFO  com.spark.examples.gradle.SparkInit - output csv fom jdbc : /home/fabrice/Documents/csvOut
+00:15:24.070 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 200
+00:15:24.070 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 121
+00:15:24.070 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 66
+00:15:24.070 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 132
+00:15:24.070 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 39
+00:15:24.070 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 93
+00:15:24.070 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 56
+00:15:24.070 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 142
+00:15:24.070 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 167
+00:15:24.071 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 196
+00:15:24.071 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 85
+00:15:24.071 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 81
+00:15:24.072 [dispatcher-event-loop-5] INFO  o.a.spark.storage.BlockManagerInfo - Removed broadcast_6_piece0 on 192.168.1.67:38259 in memory (size: 20.7 KB, free: 1929.8 MB)
+00:15:24.078 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 80
+00:15:24.078 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 109
+00:15:24.078 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 179
+00:15:24.078 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 197
+00:15:24.081 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned shuffle 1
+00:15:24.081 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 95
+00:15:24.081 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 194
+00:15:24.081 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 111
+00:15:24.081 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 133
+00:15:24.082 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 73
+00:15:24.082 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 100
+00:15:24.082 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 113
+00:15:24.082 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 89
+00:15:24.082 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 193
+00:15:24.082 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 104
+00:15:24.082 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 43
+00:15:24.082 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 44
+00:15:24.082 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 128
+00:15:24.082 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 135
+00:15:24.082 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 41
+00:15:24.082 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 131
+00:15:24.082 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 201
+00:15:24.082 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 94
+00:15:24.083 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 115
+00:15:24.083 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 137
+00:15:24.083 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 49
+00:15:24.083 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 114
+00:15:24.083 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 187
+00:15:24.083 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 198
+00:15:24.083 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 153
+00:15:24.083 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 92
+00:15:24.083 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 99
+00:15:24.083 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 158
+00:15:24.083 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 51
+00:15:24.083 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 103
+00:15:24.083 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 62
+00:15:24.085 [dispatcher-event-loop-1] INFO  o.a.spark.storage.BlockManagerInfo - Removed broadcast_3_piece0 on 192.168.1.67:38259 in memory (size: 20.7 KB, free: 1929.8 MB)
+00:15:24.091 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 173
+00:15:24.091 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 143
+00:15:24.091 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 189
+00:15:24.091 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 105
+00:15:24.091 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 186
+00:15:24.091 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 175
+00:15:24.091 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 96
+00:15:24.091 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 180
+00:15:24.091 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 192
+00:15:24.091 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 55
+00:15:24.091 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 123
+00:15:24.091 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 84
+00:15:24.091 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 88
+00:15:24.091 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 146
+00:15:24.091 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 116
+00:15:24.091 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 124
+00:15:24.092 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned shuffle 0
+00:15:24.092 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 127
+00:15:24.092 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 188
+00:15:24.092 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 136
+00:15:24.092 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 199
+00:15:24.092 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 150
+00:15:24.092 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 152
+00:15:24.092 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 118
+00:15:24.092 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 79
+00:15:24.092 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 174
+00:15:24.092 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 168
+00:15:24.092 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 52
+00:15:24.092 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 112
+00:15:24.092 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 178
+00:15:24.092 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 191
+00:15:24.092 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 134
+00:15:24.093 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 63
+00:15:24.093 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 71
+00:15:24.093 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 166
+00:15:24.093 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 38
+00:15:24.093 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 110
+00:15:24.093 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 182
+00:15:24.093 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 161
+00:15:24.093 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 72
+00:15:24.093 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 61
+00:15:24.093 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 181
+00:15:24.093 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 47
+00:15:24.093 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 169
+00:15:24.093 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 83
+00:15:24.093 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 90
+00:15:24.093 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 82
+00:15:24.093 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 74
+00:15:24.097 [dispatcher-event-loop-6] INFO  o.a.spark.storage.BlockManagerInfo - Removed broadcast_8_piece0 on 192.168.1.67:38259 in memory (size: 5.5 KB, free: 1929.8 MB)
+00:15:24.101 [main] INFO  o.a.s.s.e.d.SQLHadoopMapReduceCommitProtocol - Using output committer class org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+00:15:24.103 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 101
+00:15:24.103 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 78
+00:15:24.103 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 183
+00:15:24.103 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 130
+00:15:24.103 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 138
+00:15:24.103 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 40
+00:15:24.103 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 98
+00:15:24.103 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 195
+00:15:24.103 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 163
+00:15:24.103 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 48
+00:15:24.103 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 185
+00:15:24.103 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 117
+00:15:24.103 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 184
+00:15:24.104 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 42
+00:15:24.104 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 120
+00:15:24.104 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 162
+00:15:24.104 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 91
+00:15:24.104 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 170
+00:15:24.104 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 164
+00:15:24.104 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 87
+00:15:24.104 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 165
+00:15:24.104 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 202
+00:15:24.104 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 53
+00:15:24.104 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 37
+00:15:24.104 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 107
+00:15:24.104 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 122
+00:15:24.104 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 159
+00:15:24.104 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 126
+00:15:24.104 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 46
+00:15:24.104 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 125
+00:15:24.104 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 154
+00:15:24.104 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 106
+00:15:24.104 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 190
+00:15:24.104 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 129
+00:15:24.104 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 149
+00:15:24.104 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 65
+00:15:24.104 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 77
+00:15:24.106 [dispatcher-event-loop-1] INFO  o.a.spark.storage.BlockManagerInfo - Removed broadcast_4_piece0 on 192.168.1.67:38259 in memory (size: 7.1 KB, free: 1929.8 MB)
+00:15:24.108 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 108
+00:15:24.108 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 50
+00:15:24.108 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 102
+00:15:24.108 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 75
+00:15:24.108 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 145
+00:15:24.108 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 86
+00:15:24.108 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 147
+00:15:24.108 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 177
+00:15:24.108 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 140
+00:15:24.108 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 141
+00:15:24.109 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 97
+00:15:24.110 [dispatcher-event-loop-5] INFO  o.a.spark.storage.BlockManagerInfo - Removed broadcast_9_piece0 on 192.168.1.67:38259 in memory (size: 4.4 KB, free: 1929.8 MB)
+00:15:24.111 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 156
+00:15:24.112 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 76
+00:15:24.117 [dispatcher-event-loop-0] INFO  o.a.spark.storage.BlockManagerInfo - Removed broadcast_5_piece0 on 192.168.1.67:38259 in memory (size: 4.4 KB, free: 1929.9 MB)
+00:15:24.122 [dispatcher-event-loop-7] INFO  o.a.spark.storage.BlockManagerInfo - Removed broadcast_7_piece0 on 192.168.1.67:38259 in memory (size: 49.7 KB, free: 1929.9 MB)
+00:15:24.127 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 144
+00:15:24.127 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 58
+00:15:24.127 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 139
+00:15:24.127 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 54
+00:15:24.127 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 70
+00:15:24.127 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 59
+00:15:24.127 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 57
+00:15:24.127 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 60
+00:15:24.127 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 67
+00:15:24.127 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 171
+00:15:24.127 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 155
+00:15:24.127 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 68
+00:15:24.127 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 69
+00:15:24.127 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 148
+00:15:24.127 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 157
+00:15:24.127 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 151
+00:15:24.127 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 176
+00:15:24.127 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 172
+00:15:24.127 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 36
+00:15:24.127 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 64
+00:15:24.127 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 160
+00:15:24.127 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 45
+00:15:24.127 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 119
+00:15:24.132 [main] INFO  o.a.s.s.c.e.codegen.CodeGenerator - Code generated in 22.391573 ms
+00:15:24.152 [main] INFO  org.apache.spark.SparkContext - Starting job: csv at SparkInit.java:54
+00:15:24.154 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - Got job 4 (csv at SparkInit.java:54) with 1 output partitions
+00:15:24.154 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - Final stage: ResultStage 6 (csv at SparkInit.java:54)
+00:15:24.154 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - Parents of final stage: List()
+00:15:24.154 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - Missing parents: List()
+00:15:24.154 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - Submitting ResultStage 6 (MapPartitionsRDD[25] at csv at SparkInit.java:54), which has no missing parents
+00:15:24.170 [dag-scheduler-event-loop] INFO  o.a.spark.storage.memory.MemoryStore - Block broadcast_10 stored as values in memory (estimated size 139.9 KB, free 1929.8 MB)
+00:15:24.173 [dag-scheduler-event-loop] INFO  o.a.spark.storage.memory.MemoryStore - Block broadcast_10_piece0 stored as bytes in memory (estimated size 50.6 KB, free 1929.7 MB)
+00:15:24.173 [dispatcher-event-loop-3] INFO  o.a.spark.storage.BlockManagerInfo - Added broadcast_10_piece0 in memory on 192.168.1.67:38259 (size: 50.6 KB, free: 1929.9 MB)
+00:15:24.174 [dag-scheduler-event-loop] INFO  org.apache.spark.SparkContext - Created broadcast 10 from broadcast at DAGScheduler.scala:1161
+00:15:24.174 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - Submitting 1 missing tasks from ResultStage 6 (MapPartitionsRDD[25] at csv at SparkInit.java:54) (first 15 tasks are for partitions Vector(0))
+00:15:24.175 [dag-scheduler-event-loop] INFO  o.a.s.scheduler.TaskSchedulerImpl - Adding task set 6.0 with 1 tasks
+00:15:24.176 [dispatcher-event-loop-5] INFO  o.a.spark.scheduler.TaskSetManager - Starting task 0.0 in stage 6.0 (TID 6, localhost, executor driver, partition 0, PROCESS_LOCAL, 7169 bytes)
+00:15:24.176 [Executor task launch worker for task 6] INFO  org.apache.spark.executor.Executor - Running task 0.0 in stage 6.0 (TID 6)
+00:15:24.202 [Executor task launch worker for task 6] INFO  o.a.s.s.e.d.SQLHadoopMapReduceCommitProtocol - Using output committer class org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+00:15:24.225 [Executor task launch worker for task 6] INFO  o.a.s.s.e.datasources.jdbc.JDBCRDD - closed connection
+00:15:24.227 [Executor task launch worker for task 6] INFO  o.a.h.m.l.output.FileOutputCommitter - Saved output of task 'attempt_20190313001524_0006_m_000000_0' to file:/home/fabrice/Documents/csvOut/_temporary/0/task_20190313001524_0006_m_000000
+00:15:24.227 [Executor task launch worker for task 6] INFO  o.a.s.mapred.SparkHadoopMapRedUtil - attempt_20190313001524_0006_m_000000_0: Committed
+00:15:24.228 [Executor task launch worker for task 6] INFO  org.apache.spark.executor.Executor - Finished task 0.0 in stage 6.0 (TID 6). 2083 bytes result sent to driver
+00:15:24.229 [task-result-getter-2] INFO  o.a.spark.scheduler.TaskSetManager - Finished task 0.0 in stage 6.0 (TID 6) in 54 ms on localhost (executor driver) (1/1)
+00:15:24.229 [task-result-getter-2] INFO  o.a.s.scheduler.TaskSchedulerImpl - Removed TaskSet 6.0, whose tasks have all completed, from pool 
+00:15:24.230 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - ResultStage 6 (csv at SparkInit.java:54) finished in 0.075 s
+00:15:24.230 [main] INFO  o.a.spark.scheduler.DAGScheduler - Job 4 finished: csv at SparkInit.java:54, took 0.077804 s
+00:15:24.239 [main] INFO  o.a.s.s.e.d.FileFormatWriter - Write Job 6e6681b7-877b-4177-bfa4-3ce6ba5d2055 committed.
+00:15:24.239 [main] INFO  o.a.s.s.e.d.FileFormatWriter - Finished processing stats for write job 6e6681b7-877b-4177-bfa4-3ce6ba5d2055.
+00:15:24.491 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 219
+00:15:24.491 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 228
+00:15:24.491 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 220
+00:15:24.491 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 205
+00:15:24.491 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 217
+00:15:24.491 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 232
+00:15:24.493 [dispatcher-event-loop-7] INFO  o.a.spark.storage.BlockManagerInfo - Removed broadcast_10_piece0 on 192.168.1.67:38259 in memory (size: 50.6 KB, free: 1929.9 MB)
+00:15:24.494 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 213
+00:15:24.494 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 222
+00:15:24.494 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 212
+00:15:24.494 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 209
+00:15:24.494 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 214
+00:15:24.494 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 224
+00:15:24.494 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 226
+00:15:24.494 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 221
+00:15:24.494 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 207
+00:15:24.494 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 230
+00:15:24.494 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 229
+00:15:24.494 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 231
+00:15:24.494 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 206
+00:15:24.494 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 216
+00:15:24.494 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 233
+00:15:24.494 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 215
+00:15:24.494 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 204
+00:15:24.494 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 227
+00:15:24.494 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 211
+00:15:24.494 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 223
+00:15:24.494 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 225
+00:15:24.494 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 208
+00:15:24.494 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 210
+00:15:24.494 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 218
+00:15:24.494 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 203
+00:15:24.547 [main] INFO  org.apache.spark.sql.hive.HiveUtils - Initializing HiveMetastoreConnection version 1.2.1 using Spark classes.
+00:15:25.043 [main] INFO  o.a.h.hive.metastore.HiveMetaStore - 0: Opening raw store with implemenation class:org.apache.hadoop.hive.metastore.ObjectStore
+00:15:25.065 [main] INFO  o.a.h.hive.metastore.ObjectStore - ObjectStore, initialize called
+00:15:32.794 [main] INFO  o.a.h.hive.metastore.ObjectStore - Setting MetaStore object pin classes with hive.metastore.cache.pinobjtypes="Table,StorageDescriptor,SerDeInfo,Partition,Database,Type,FieldSchema,Order"
+00:15:40.417 [main] INFO  o.a.h.h.metastore.MetaStoreDirectSql - Using direct SQL, underlying DB is DERBY
+00:15:40.420 [main] INFO  o.a.h.hive.metastore.ObjectStore - Initialized ObjectStore
+00:15:40.734 [main] WARN  o.a.h.hive.metastore.ObjectStore - Version information not found in metastore. hive.metastore.schema.verification is not enabled so recording the schema version 1.2.0
+00:15:41.015 [main] WARN  o.a.h.hive.metastore.ObjectStore - Failed to get database default, returning NoSuchObjectException
+00:15:41.339 [main] INFO  o.a.h.hive.metastore.HiveMetaStore - Added admin role in metastore
+00:15:41.348 [main] INFO  o.a.h.hive.metastore.HiveMetaStore - Added public role in metastore
+00:15:41.665 [main] INFO  o.a.h.hive.metastore.HiveMetaStore - No user is added in admin role, since config is empty
+00:15:41.738 [main] INFO  o.a.h.hive.metastore.HiveMetaStore - 0: get_all_databases
+00:15:41.738 [main] INFO  o.a.h.h.m.HiveMetaStore.audit - ugi=fabrice	ip=unknown-ip-addr	cmd=get_all_databases	
+00:15:41.749 [main] INFO  o.a.h.hive.metastore.HiveMetaStore - 0: get_functions: db=default pat=*
+00:15:41.750 [main] INFO  o.a.h.h.m.HiveMetaStore.audit - ugi=fabrice	ip=unknown-ip-addr	cmd=get_functions: db=default pat=*	
+00:15:42.960 [main] INFO  o.a.h.hive.ql.session.SessionState - Created HDFS directory: /tmp/hive/fabrice
+00:15:42.962 [main] INFO  o.a.h.hive.ql.session.SessionState - Created local directory: /tmp/fabrice
+00:15:42.965 [main] INFO  o.a.h.hive.ql.session.SessionState - Created local directory: /tmp/031b2190-855f-45db-8a3b-7a28e7f5b9b3_resources
+00:15:42.968 [main] INFO  o.a.h.hive.ql.session.SessionState - Created HDFS directory: /tmp/hive/fabrice/031b2190-855f-45db-8a3b-7a28e7f5b9b3
+00:15:42.971 [main] INFO  o.a.h.hive.ql.session.SessionState - Created local directory: /tmp/fabrice/031b2190-855f-45db-8a3b-7a28e7f5b9b3
+00:15:42.973 [main] INFO  o.a.h.hive.ql.session.SessionState - Created HDFS directory: /tmp/hive/fabrice/031b2190-855f-45db-8a3b-7a28e7f5b9b3/_tmp_space.db
+00:15:42.974 [main] INFO  o.a.s.sql.hive.client.HiveClientImpl - Warehouse location for Hive client (version 1.2.2) is /home/fabrice/workspace/sparkexamples/gradle.template/spark-warehouse
+00:15:42.980 [main] INFO  o.a.h.hive.metastore.HiveMetaStore - 0: get_database: default
+00:15:42.980 [main] INFO  o.a.h.h.m.HiveMetaStore.audit - ugi=fabrice	ip=unknown-ip-addr	cmd=get_database: default	
+00:15:42.998 [main] INFO  o.a.h.hive.metastore.HiveMetaStore - 0: get_table : db=default tbl=mytable
+00:15:42.998 [main] INFO  o.a.h.h.m.HiveMetaStore.audit - ugi=fabrice	ip=unknown-ip-addr	cmd=get_table : db=default tbl=mytable	
+00:15:43.011 [main] INFO  o.a.h.hive.metastore.HiveMetaStore - 0: get_table : db=default tbl=mytable
+00:15:43.012 [main] INFO  o.a.h.h.m.HiveMetaStore.audit - ugi=fabrice	ip=unknown-ip-addr	cmd=get_table : db=default tbl=mytable	
+00:15:43.059 [main] INFO  o.a.h.hive.metastore.HiveMetaStore - 0: get_database: global_temp
+00:15:43.060 [main] INFO  o.a.h.h.m.HiveMetaStore.audit - ugi=fabrice	ip=unknown-ip-addr	cmd=get_database: global_temp	
+00:15:43.061 [main] WARN  o.a.h.hive.metastore.ObjectStore - Failed to get database global_temp, returning NoSuchObjectException
+00:15:43.109 [main] INFO  o.a.h.hive.metastore.HiveMetaStore - 0: get_table : db=default tbl=mytable
+00:15:43.109 [main] INFO  o.a.h.h.m.HiveMetaStore.audit - ugi=fabrice	ip=unknown-ip-addr	cmd=get_table : db=default tbl=mytable	
+00:15:43.112 [main] INFO  o.a.h.hive.metastore.HiveMetaStore - 0: get_database: default
+00:15:43.112 [main] INFO  o.a.h.h.m.HiveMetaStore.audit - ugi=fabrice	ip=unknown-ip-addr	cmd=get_database: default	
+00:15:43.114 [main] INFO  o.a.h.hive.metastore.HiveMetaStore - 0: get_table : db=default tbl=mytable
+00:15:43.114 [main] INFO  o.a.h.h.m.HiveMetaStore.audit - ugi=fabrice	ip=unknown-ip-addr	cmd=get_table : db=default tbl=mytable	
+00:15:43.116 [main] INFO  o.a.h.hive.metastore.HiveMetaStore - 0: get_database: default
+00:15:43.117 [main] INFO  o.a.h.h.m.HiveMetaStore.audit - ugi=fabrice	ip=unknown-ip-addr	cmd=get_database: default	
+00:15:43.120 [main] INFO  o.a.h.hive.metastore.HiveMetaStore - 0: get_database: default
+00:15:43.120 [main] INFO  o.a.h.h.m.HiveMetaStore.audit - ugi=fabrice	ip=unknown-ip-addr	cmd=get_database: default	
+00:15:43.126 [main] INFO  o.a.h.hive.metastore.HiveMetaStore - 0: get_database: default
+00:15:43.126 [main] INFO  o.a.h.h.m.HiveMetaStore.audit - ugi=fabrice	ip=unknown-ip-addr	cmd=get_database: default	
+00:15:43.129 [main] INFO  o.a.h.hive.metastore.HiveMetaStore - 0: get_table : db=default tbl=mytable
+00:15:43.129 [main] INFO  o.a.h.h.m.HiveMetaStore.audit - ugi=fabrice	ip=unknown-ip-addr	cmd=get_table : db=default tbl=mytable	
+00:15:43.131 [main] INFO  o.a.h.hive.metastore.HiveMetaStore - 0: get_database: default
+00:15:43.131 [main] INFO  o.a.h.h.m.HiveMetaStore.audit - ugi=fabrice	ip=unknown-ip-addr	cmd=get_database: default	
+00:15:43.327 [main] INFO  o.a.h.hive.metastore.HiveMetaStore - 0: create_table: Table(tableName:mytable, dbName:default, owner:fabrice, createTime:1552432543, lastAccessTime:0, retention:0, sd:StorageDescriptor(cols:[FieldSchema(name:EMP_TYPE, type:string, comment:null), FieldSchema(name:id, type:bigint, comment:null), FieldSchema(name:ville, type:string, comment:null), FieldSchema(name:state, type:string, comment:null), FieldSchema(name:rue, type:string, comment:null), FieldSchema(name:zip, type:string, comment:null), FieldSchema(name:age, type:int, comment:null), FieldSchema(name:COMM, type:string, comment:null), FieldSchema(name:dob, type:date, comment:null), FieldSchema(name:employeeType, type:string, comment:null), FieldSchema(name:first_name, type:string, comment:null), FieldSchema(name:name, type:string, comment:null), FieldSchema(name:PHONE, type:string, comment:null), FieldSchema(name:PIC, type:binary, comment:null), FieldSchema(name:startDate, type:date, comment:null), FieldSchema(name:dept_id, type:bigint, comment:null)], location:file:/home/fabrice/workspace/sparkexamples/gradle.template/spark-warehouse/mytable, inputFormat:org.apache.hadoop.mapred.TextInputFormat, outputFormat:org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat, compressed:false, numBuckets:-1, serdeInfo:SerDeInfo(name:null, serializationLib:org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe, parameters:{serialization.format=1}), bucketCols:[], sortCols:[], parameters:{}, skewedInfo:SkewedInfo(skewedColNames:[], skewedColValues:[], skewedColValueLocationMaps:{})), partitionKeys:[], parameters:{spark.sql.sources.schema.part.0={"type":"struct","fields":[{"name":"EMP_TYPE","type":"string","nullable":true,"metadata":{}},{"name":"id","type":"long","nullable":true,"metadata":{}},{"name":"ville","type":"string","nullable":true,"metadata":{}},{"name":"state","type":"string","nullable":true,"metadata":{}},{"name":"rue","type":"string","nullable":true,"metadata":{}},{"name":"zip","type":"string","nullable":true,"metadata":{}},{"name":"age","type":"integer","nullable":true,"metadata":{}},{"name":"COMM","type":"string","nullable":true,"metadata":{}},{"name":"dob","type":"date","nullable":true,"metadata":{}},{"name":"employeeType","type":"string","nullable":true,"metadata":{}},{"name":"first_name","type":"string","nullable":true,"metadata":{}},{"name":"name","type":"string","nullable":true,"metadata":{}},{"name":"PHONE","type":"string","nullable":true,"metadata":{}},{"name":"PIC","type":"binary","nullable":true,"metadata":{}},{"name":"startDate","type":"date","nullable":true,"metadata":{}},{"name":"dept_id","type":"long","nullable":true,"metadata":{}}]}, spark.sql.sources.schema.numParts=1, spark.sql.create.version=2.4.0}, viewOriginalText:null, viewExpandedText:null, tableType:MANAGED_TABLE, privileges:PrincipalPrivilegeSet(userPrivileges:{}, groupPrivileges:null, rolePrivileges:null))
+00:15:43.327 [main] INFO  o.a.h.h.m.HiveMetaStore.audit - ugi=fabrice	ip=unknown-ip-addr	cmd=create_table: Table(tableName:mytable, dbName:default, owner:fabrice, createTime:1552432543, lastAccessTime:0, retention:0, sd:StorageDescriptor(cols:[FieldSchema(name:EMP_TYPE, type:string, comment:null), FieldSchema(name:id, type:bigint, comment:null), FieldSchema(name:ville, type:string, comment:null), FieldSchema(name:state, type:string, comment:null), FieldSchema(name:rue, type:string, comment:null), FieldSchema(name:zip, type:string, comment:null), FieldSchema(name:age, type:int, comment:null), FieldSchema(name:COMM, type:string, comment:null), FieldSchema(name:dob, type:date, comment:null), FieldSchema(name:employeeType, type:string, comment:null), FieldSchema(name:first_name, type:string, comment:null), FieldSchema(name:name, type:string, comment:null), FieldSchema(name:PHONE, type:string, comment:null), FieldSchema(name:PIC, type:binary, comment:null), FieldSchema(name:startDate, type:date, comment:null), FieldSchema(name:dept_id, type:bigint, comment:null)], location:file:/home/fabrice/workspace/sparkexamples/gradle.template/spark-warehouse/mytable, inputFormat:org.apache.hadoop.mapred.TextInputFormat, outputFormat:org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat, compressed:false, numBuckets:-1, serdeInfo:SerDeInfo(name:null, serializationLib:org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe, parameters:{serialization.format=1}), bucketCols:[], sortCols:[], parameters:{}, skewedInfo:SkewedInfo(skewedColNames:[], skewedColValues:[], skewedColValueLocationMaps:{})), partitionKeys:[], parameters:{spark.sql.sources.schema.part.0={"type":"struct","fields":[{"name":"EMP_TYPE","type":"string","nullable":true,"metadata":{}},{"name":"id","type":"long","nullable":true,"metadata":{}},{"name":"ville","type":"string","nullable":true,"metadata":{}},{"name":"state","type":"string","nullable":true,"metadata":{}},{"name":"rue","type":"string","nullable":true,"metadata":{}},{"name":"zip","type":"string","nullable":true,"metadata":{}},{"name":"age","type":"integer","nullable":true,"metadata":{}},{"name":"COMM","type":"string","nullable":true,"metadata":{}},{"name":"dob","type":"date","nullable":true,"metadata":{}},{"name":"employeeType","type":"string","nullable":true,"metadata":{}},{"name":"first_name","type":"string","nullable":true,"metadata":{}},{"name":"name","type":"string","nullable":true,"metadata":{}},{"name":"PHONE","type":"string","nullable":true,"metadata":{}},{"name":"PIC","type":"binary","nullable":true,"metadata":{}},{"name":"startDate","type":"date","nullable":true,"metadata":{}},{"name":"dept_id","type":"long","nullable":true,"metadata":{}}]}, spark.sql.sources.schema.numParts=1, spark.sql.create.version=2.4.0}, viewOriginalText:null, viewExpandedText:null, tableType:MANAGED_TABLE, privileges:PrincipalPrivilegeSet(userPrivileges:{}, groupPrivileges:null, rolePrivileges:null))	
+00:15:43.329 [main] WARN  o.a.h.hive.metastore.HiveMetaStore - Location: file:/home/fabrice/workspace/sparkexamples/gradle.template/spark-warehouse/mytable specified for non-external table:mytable
+00:15:43.331 [main] INFO  o.a.hadoop.hive.common.FileUtils - Creating directory if it doesn't exist: file:/home/fabrice/workspace/sparkexamples/gradle.template/spark-warehouse/mytable
+00:15:43.547 [main] INFO  o.a.h.hive.metastore.HiveMetaStore - 0: get_database: default
+00:15:43.547 [main] INFO  o.a.h.h.m.HiveMetaStore.audit - ugi=fabrice	ip=unknown-ip-addr	cmd=get_database: default	
+00:15:43.550 [main] INFO  o.a.h.hive.metastore.HiveMetaStore - 0: get_table : db=default tbl=mytable
+00:15:43.550 [main] INFO  o.a.h.h.m.HiveMetaStore.audit - ugi=fabrice	ip=unknown-ip-addr	cmd=get_table : db=default tbl=mytable	
+00:15:43.713 [main] INFO  o.a.h.hive.metastore.HiveMetaStore - 0: get_table : db=default tbl=mytable
+00:15:43.713 [main] INFO  o.a.h.h.m.HiveMetaStore.audit - ugi=fabrice	ip=unknown-ip-addr	cmd=get_table : db=default tbl=mytable	
+00:15:43.793 [main] INFO  o.a.hadoop.hive.common.FileUtils - Creating directory if it doesn't exist: file:/home/fabrice/workspace/sparkexamples/gradle.template/spark-warehouse/mytable/.hive-staging_hive_2019-03-13_00-15-43_792_7344765577497374022-1
+00:15:43.850 [main] INFO  o.a.s.s.e.d.SQLHadoopMapReduceCommitProtocol - Using output committer class org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+00:15:43.874 [main] INFO  org.apache.spark.SparkContext - Starting job: sql at SparkInit.java:58
+00:15:43.874 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - Got job 5 (sql at SparkInit.java:58) with 1 output partitions
+00:15:43.874 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - Final stage: ResultStage 7 (sql at SparkInit.java:58)
+00:15:43.874 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - Parents of final stage: List()
+00:15:43.874 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - Missing parents: List()
+00:15:43.875 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - Submitting ResultStage 7 (MapPartitionsRDD[28] at sql at SparkInit.java:58), which has no missing parents
+00:15:43.891 [dag-scheduler-event-loop] INFO  o.a.spark.storage.memory.MemoryStore - Block broadcast_11 stored as values in memory (estimated size 204.4 KB, free 1929.7 MB)
+00:15:43.893 [dag-scheduler-event-loop] INFO  o.a.spark.storage.memory.MemoryStore - Block broadcast_11_piece0 stored as bytes in memory (estimated size 72.6 KB, free 1929.6 MB)
+00:15:43.893 [dispatcher-event-loop-0] INFO  o.a.spark.storage.BlockManagerInfo - Added broadcast_11_piece0 in memory on 192.168.1.67:38259 (size: 72.6 KB, free: 1929.8 MB)
+00:15:43.893 [dag-scheduler-event-loop] INFO  org.apache.spark.SparkContext - Created broadcast 11 from broadcast at DAGScheduler.scala:1161
+00:15:43.894 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - Submitting 1 missing tasks from ResultStage 7 (MapPartitionsRDD[28] at sql at SparkInit.java:58) (first 15 tasks are for partitions Vector(0))
+00:15:43.894 [dag-scheduler-event-loop] INFO  o.a.s.scheduler.TaskSchedulerImpl - Adding task set 7.0 with 1 tasks
+00:15:43.895 [dispatcher-event-loop-1] INFO  o.a.spark.scheduler.TaskSetManager - Starting task 0.0 in stage 7.0 (TID 7, localhost, executor driver, partition 0, PROCESS_LOCAL, 7169 bytes)
+00:15:43.895 [Executor task launch worker for task 7] INFO  org.apache.spark.executor.Executor - Running task 0.0 in stage 7.0 (TID 7)
+00:15:43.915 [Executor task launch worker for task 7] INFO  o.a.s.s.e.d.SQLHadoopMapReduceCommitProtocol - Using output committer class org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+00:15:44.022 [Executor task launch worker for task 7] INFO  o.a.s.s.e.datasources.jdbc.JDBCRDD - closed connection
+00:15:44.024 [Executor task launch worker for task 7] INFO  o.a.h.m.l.output.FileOutputCommitter - Saved output of task 'attempt_20190313001543_0007_m_000000_0' to file:/home/fabrice/workspace/sparkexamples/gradle.template/spark-warehouse/mytable/.hive-staging_hive_2019-03-13_00-15-43_792_7344765577497374022-1/-ext-10000/_temporary/0/task_20190313001543_0007_m_000000
+00:15:44.024 [Executor task launch worker for task 7] INFO  o.a.s.mapred.SparkHadoopMapRedUtil - attempt_20190313001543_0007_m_000000_0: Committed
+00:15:44.025 [Executor task launch worker for task 7] INFO  org.apache.spark.executor.Executor - Finished task 0.0 in stage 7.0 (TID 7). 2083 bytes result sent to driver
+00:15:44.026 [task-result-getter-3] INFO  o.a.spark.scheduler.TaskSetManager - Finished task 0.0 in stage 7.0 (TID 7) in 131 ms on localhost (executor driver) (1/1)
+00:15:44.026 [task-result-getter-3] INFO  o.a.s.scheduler.TaskSchedulerImpl - Removed TaskSet 7.0, whose tasks have all completed, from pool 
+00:15:44.027 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - ResultStage 7 (sql at SparkInit.java:58) finished in 0.152 s
+00:15:44.028 [main] INFO  o.a.spark.scheduler.DAGScheduler - Job 5 finished: sql at SparkInit.java:58, took 0.153828 s
+00:15:44.033 [main] INFO  o.a.s.s.e.d.FileFormatWriter - Write Job 6fb10966-9f1f-4fe0-b883-5026a195a691 committed.
+00:15:44.034 [main] INFO  o.a.s.s.e.d.FileFormatWriter - Finished processing stats for write job 6fb10966-9f1f-4fe0-b883-5026a195a691.
+00:15:44.035 [main] INFO  o.a.h.hive.metastore.HiveMetaStore - 0: get_table : db=default tbl=mytable
+00:15:44.035 [main] INFO  o.a.h.h.m.HiveMetaStore.audit - ugi=fabrice	ip=unknown-ip-addr	cmd=get_table : db=default tbl=mytable	
+00:15:44.058 [main] INFO  o.a.h.hive.metastore.HiveMetaStore - 0: get_table : db=default tbl=mytable
+00:15:44.058 [main] INFO  o.a.h.h.m.HiveMetaStore.audit - ugi=fabrice	ip=unknown-ip-addr	cmd=get_table : db=default tbl=mytable	
+00:15:44.079 [main] INFO  o.a.h.hive.ql.session.SessionState - Could not get hdfsEncryptionShim, it is only applicable to hdfs filesystem.
+00:15:44.080 [main] INFO  hive.ql.metadata.Hive - Replacing src:file:/home/fabrice/workspace/sparkexamples/gradle.template/spark-warehouse/mytable/.hive-staging_hive_2019-03-13_00-15-43_792_7344765577497374022-1/-ext-10000/part-00000-e3542e78-d9ec-4fb7-8295-b420c882efab-c000, dest: file:/home/fabrice/workspace/sparkexamples/gradle.template/spark-warehouse/mytable/part-00000-e3542e78-d9ec-4fb7-8295-b420c882efab-c000, Status:true
+00:15:44.095 [main] INFO  o.a.h.hive.metastore.HiveMetaStore - 0: alter_table: db=default tbl=mytable newtbl=mytable
+00:15:44.095 [main] INFO  o.a.h.h.m.HiveMetaStore.audit - ugi=fabrice	ip=unknown-ip-addr	cmd=alter_table: db=default tbl=mytable newtbl=mytable	
+00:15:44.123 [main] INFO  hive.log - Updating table stats fast for mytable
+00:15:44.124 [main] INFO  hive.log - Updated size of table mytable to 247
+00:15:44.171 [main] INFO  o.a.h.hive.metastore.HiveMetaStore - 0: get_database: default
+00:15:44.171 [main] INFO  o.a.h.h.m.HiveMetaStore.audit - ugi=fabrice	ip=unknown-ip-addr	cmd=get_database: default	
+00:15:44.173 [main] INFO  o.a.h.hive.metastore.HiveMetaStore - 0: get_table : db=default tbl=mytable
+00:15:44.173 [main] INFO  o.a.h.h.m.HiveMetaStore.audit - ugi=fabrice	ip=unknown-ip-addr	cmd=get_table : db=default tbl=mytable	
+00:15:44.191 [main] INFO  o.a.h.hive.metastore.HiveMetaStore - 0: get_table : db=default tbl=mytable
+00:15:44.191 [main] INFO  o.a.h.h.m.HiveMetaStore.audit - ugi=fabrice	ip=unknown-ip-addr	cmd=get_table : db=default tbl=mytable	
+00:15:44.230 [main] INFO  o.a.h.hive.metastore.HiveMetaStore - 0: get_table : db=default tbl=mytable
+00:15:44.230 [main] INFO  o.a.h.h.m.HiveMetaStore.audit - ugi=fabrice	ip=unknown-ip-addr	cmd=get_table : db=default tbl=mytable	
+00:15:44.249 [main] INFO  o.a.h.hive.metastore.HiveMetaStore - 0: get_database: default
+00:15:44.249 [main] INFO  o.a.h.h.m.HiveMetaStore.audit - ugi=fabrice	ip=unknown-ip-addr	cmd=get_database: default	
+00:15:44.251 [main] INFO  o.a.h.hive.metastore.HiveMetaStore - 0: get_table : db=default tbl=mytable
+00:15:44.251 [main] INFO  o.a.h.h.m.HiveMetaStore.audit - ugi=fabrice	ip=unknown-ip-addr	cmd=get_table : db=default tbl=mytable	
+00:15:44.267 [main] INFO  o.a.h.hive.metastore.HiveMetaStore - 0: get_table : db=default tbl=mytable
+00:15:44.268 [main] INFO  o.a.h.h.m.HiveMetaStore.audit - ugi=fabrice	ip=unknown-ip-addr	cmd=get_table : db=default tbl=mytable	
+00:15:44.295 [main] INFO  o.a.h.hive.metastore.HiveMetaStore - 0: get_database: default
+00:15:44.295 [main] INFO  o.a.h.h.m.HiveMetaStore.audit - ugi=fabrice	ip=unknown-ip-addr	cmd=get_database: default	
+00:15:44.297 [main] INFO  o.a.h.hive.metastore.HiveMetaStore - 0: get_table : db=default tbl=mytable
+00:15:44.298 [main] INFO  o.a.h.h.m.HiveMetaStore.audit - ugi=fabrice	ip=unknown-ip-addr	cmd=get_table : db=default tbl=mytable	
+00:15:44.314 [main] INFO  o.a.h.hive.metastore.HiveMetaStore - 0: get_database: default
+00:15:44.314 [main] INFO  o.a.h.h.m.HiveMetaStore.audit - ugi=fabrice	ip=unknown-ip-addr	cmd=get_database: default	
+00:15:44.317 [main] INFO  o.a.h.hive.metastore.HiveMetaStore - 0: get_table : db=default tbl=mytable
+00:15:44.317 [main] INFO  o.a.h.h.m.HiveMetaStore.audit - ugi=fabrice	ip=unknown-ip-addr	cmd=get_table : db=default tbl=mytable	
+00:15:44.329 [main] INFO  o.a.h.hive.metastore.HiveMetaStore - 0: drop_table : db=default tbl=mytable
+00:15:44.329 [main] INFO  o.a.h.h.m.HiveMetaStore.audit - ugi=fabrice	ip=unknown-ip-addr	cmd=drop_table : db=default tbl=mytable	
+00:15:47.971 [main] INFO  hive.metastore.hivemetastoressimpl - deleting  file:/home/fabrice/workspace/sparkexamples/gradle.template/spark-warehouse/mytable
+00:15:47.974 [main] INFO  o.a.h.conf.Configuration.deprecation - io.bytes.per.checksum is deprecated. Instead, use dfs.bytes-per-checksum
+00:15:47.976 [main] INFO  o.a.hadoop.fs.TrashPolicyDefault - Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+00:15:47.976 [main] INFO  hive.metastore.hivemetastoressimpl - Deleted the diretory file:/home/fabrice/workspace/sparkexamples/gradle.template/spark-warehouse/mytable
+00:15:47.999 [main] INFO  o.a.h.hive.metastore.HiveMetaStore - 0: get_table : db=default tbl=mytable
+00:15:47.999 [main] INFO  o.a.h.h.m.HiveMetaStore.audit - ugi=fabrice	ip=unknown-ip-addr	cmd=get_table : db=default tbl=mytable	
+00:15:48.001 [main] INFO  o.a.h.hive.metastore.HiveMetaStore - 0: get_database: default
+00:15:48.001 [main] INFO  o.a.h.h.m.HiveMetaStore.audit - ugi=fabrice	ip=unknown-ip-addr	cmd=get_database: default	
+00:15:48.003 [main] INFO  o.a.h.hive.metastore.HiveMetaStore - 0: get_database: default
+00:15:48.003 [main] INFO  o.a.h.h.m.HiveMetaStore.audit - ugi=fabrice	ip=unknown-ip-addr	cmd=get_database: default	
+00:15:48.004 [main] INFO  o.a.h.hive.metastore.HiveMetaStore - 0: get_database: default
+00:15:48.004 [main] INFO  o.a.h.h.m.HiveMetaStore.audit - ugi=fabrice	ip=unknown-ip-addr	cmd=get_database: default	
+00:15:48.006 [main] INFO  o.a.h.hive.metastore.HiveMetaStore - 0: get_database: default
+00:15:48.006 [main] INFO  o.a.h.h.m.HiveMetaStore.audit - ugi=fabrice	ip=unknown-ip-addr	cmd=get_database: default	
+00:15:48.019 [main] INFO  o.a.s.s.e.d.p.ParquetFileFormat - Using default output committer for Parquet: org.apache.parquet.hadoop.ParquetOutputCommitter
+00:15:48.027 [main] INFO  o.a.s.s.e.d.SQLHadoopMapReduceCommitProtocol - Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+00:15:48.028 [main] INFO  o.a.s.s.e.d.SQLHadoopMapReduceCommitProtocol - Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+00:15:48.044 [main] INFO  org.apache.spark.SparkContext - Starting job: saveAsTable at SparkInit.java:59
+00:15:48.044 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - Got job 6 (saveAsTable at SparkInit.java:59) with 1 output partitions
+00:15:48.044 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - Final stage: ResultStage 8 (saveAsTable at SparkInit.java:59)
+00:15:48.044 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - Parents of final stage: List()
+00:15:48.045 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - Missing parents: List()
+00:15:48.045 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - Submitting ResultStage 8 (MapPartitionsRDD[30] at saveAsTable at SparkInit.java:59), which has no missing parents
+00:15:48.056 [dag-scheduler-event-loop] INFO  o.a.spark.storage.memory.MemoryStore - Block broadcast_12 stored as values in memory (estimated size 139.9 KB, free 1929.5 MB)
+00:15:48.058 [dag-scheduler-event-loop] INFO  o.a.spark.storage.memory.MemoryStore - Block broadcast_12_piece0 stored as bytes in memory (estimated size 50.0 KB, free 1929.4 MB)
+00:15:48.058 [dispatcher-event-loop-5] INFO  o.a.spark.storage.BlockManagerInfo - Added broadcast_12_piece0 in memory on 192.168.1.67:38259 (size: 50.0 KB, free: 1929.8 MB)
+00:15:48.059 [dag-scheduler-event-loop] INFO  org.apache.spark.SparkContext - Created broadcast 12 from broadcast at DAGScheduler.scala:1161
+00:15:48.059 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - Submitting 1 missing tasks from ResultStage 8 (MapPartitionsRDD[30] at saveAsTable at SparkInit.java:59) (first 15 tasks are for partitions Vector(0))
+00:15:48.059 [dag-scheduler-event-loop] INFO  o.a.s.scheduler.TaskSchedulerImpl - Adding task set 8.0 with 1 tasks
+00:15:48.060 [dispatcher-event-loop-4] INFO  o.a.spark.scheduler.TaskSetManager - Starting task 0.0 in stage 8.0 (TID 8, localhost, executor driver, partition 0, PROCESS_LOCAL, 7169 bytes)
+00:15:48.060 [Executor task launch worker for task 8] INFO  org.apache.spark.executor.Executor - Running task 0.0 in stage 8.0 (TID 8)
+00:15:48.077 [Executor task launch worker for task 8] INFO  o.a.s.s.e.d.SQLHadoopMapReduceCommitProtocol - Using user defined output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+00:15:48.077 [Executor task launch worker for task 8] INFO  o.a.s.s.e.d.SQLHadoopMapReduceCommitProtocol - Using output committer class org.apache.parquet.hadoop.ParquetOutputCommitter
+00:15:48.078 [Executor task launch worker for task 8] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+00:15:48.079 [Executor task launch worker for task 8] INFO  o.a.parquet.hadoop.codec.CodecConfig - Compression: SNAPPY
+00:15:48.091 [Executor task launch worker for task 8] INFO  o.a.p.hadoop.ParquetOutputFormat - Parquet block size to 134217728
+00:15:48.091 [Executor task launch worker for task 8] INFO  o.a.p.hadoop.ParquetOutputFormat - Parquet page size to 1048576
+00:15:48.091 [Executor task launch worker for task 8] INFO  o.a.p.hadoop.ParquetOutputFormat - Parquet dictionary page size to 1048576
+00:15:48.091 [Executor task launch worker for task 8] INFO  o.a.p.hadoop.ParquetOutputFormat - Dictionary is on
+00:15:48.091 [Executor task launch worker for task 8] INFO  o.a.p.hadoop.ParquetOutputFormat - Validation is off
+00:15:48.091 [Executor task launch worker for task 8] INFO  o.a.p.hadoop.ParquetOutputFormat - Writer version is: PARQUET_1_0
+00:15:48.091 [Executor task launch worker for task 8] INFO  o.a.p.hadoop.ParquetOutputFormat - Maximum row group padding size is 8388608 bytes
+00:15:48.091 [Executor task launch worker for task 8] INFO  o.a.p.hadoop.ParquetOutputFormat - Page size checking is: estimated
+00:15:48.091 [Executor task launch worker for task 8] INFO  o.a.p.hadoop.ParquetOutputFormat - Min row count for page size check is: 100
+00:15:48.091 [Executor task launch worker for task 8] INFO  o.a.p.hadoop.ParquetOutputFormat - Max row count for page size check is: 10000
+00:15:48.118 [Executor task launch worker for task 8] INFO  o.a.s.s.e.d.p.ParquetWriteSupport - Initialized Parquet WriteSupport with Catalyst schema:
+{
+  "type" : "struct",
+  "fields" : [ {
+    "name" : "EMP_TYPE",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "id",
+    "type" : "long",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "ville",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "state",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "rue",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "zip",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "age",
+    "type" : "integer",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "COMM",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "dob",
+    "type" : "date",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "employeeType",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "first_name",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "name",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "PHONE",
+    "type" : "string",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "PIC",
+    "type" : "binary",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "startDate",
+    "type" : "date",
+    "nullable" : true,
+    "metadata" : { }
+  }, {
+    "name" : "dept_id",
+    "type" : "long",
+    "nullable" : true,
+    "metadata" : { }
+  } ]
+}
+and corresponding Parquet message type:
+message spark_schema {
+  optional binary EMP_TYPE (UTF8);
+  optional int64 id;
+  optional binary ville (UTF8);
+  optional binary state (UTF8);
+  optional binary rue (UTF8);
+  optional binary zip (UTF8);
+  optional int32 age;
+  optional binary COMM (UTF8);
+  optional int32 dob (DATE);
+  optional binary employeeType (UTF8);
+  optional binary first_name (UTF8);
+  optional binary name (UTF8);
+  optional binary PHONE (UTF8);
+  optional binary PIC;
+  optional int32 startDate (DATE);
+  optional int64 dept_id;
+}
+
+       
+00:15:48.149 [Executor task launch worker for task 8] INFO  o.a.hadoop.io.compress.CodecPool - Got brand-new compressor [.snappy]
+00:15:48.222 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 237
+00:15:48.225 [dispatcher-event-loop-2] INFO  o.a.spark.storage.BlockManagerInfo - Removed broadcast_11_piece0 on 192.168.1.67:38259 in memory (size: 72.6 KB, free: 1929.9 MB)
+00:15:48.227 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 246
+00:15:48.227 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 236
+00:15:48.227 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 245
+00:15:48.228 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 256
+00:15:48.228 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 252
+00:15:48.228 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 250
+00:15:48.228 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 244
+00:15:48.228 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 248
+00:15:48.228 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 259
+00:15:48.228 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 238
+00:15:48.228 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 240
+00:15:48.228 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 263
+00:15:48.228 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 262
+00:15:48.228 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 254
+00:15:48.228 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 247
+00:15:48.228 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 258
+00:15:48.228 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 261
+00:15:48.228 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 267
+00:15:48.228 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 268
+00:15:48.228 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 255
+00:15:48.228 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 243
+00:15:48.228 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 265
+00:15:48.228 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 249
+00:15:48.228 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 257
+00:15:48.228 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 266
+00:15:48.228 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 264
+00:15:48.228 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 251
+00:15:48.228 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 253
+00:15:48.228 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 235
+00:15:48.228 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 242
+00:15:48.228 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 241
+00:15:48.228 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 260
+00:15:48.228 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 239
+00:15:48.228 [Spark Context Cleaner] INFO  org.apache.spark.ContextCleaner - Cleaned accumulator 234
+00:15:48.392 [Executor task launch worker for task 8] INFO  o.a.s.s.e.datasources.jdbc.JDBCRDD - closed connection
+00:15:48.392 [Executor task launch worker for task 8] INFO  o.a.p.h.InternalParquetRecordWriter - Flushing mem columnStore to file. allocated memory: 236
+00:15:48.569 [Executor task launch worker for task 8] INFO  o.a.h.m.l.output.FileOutputCommitter - Saved output of task 'attempt_20190313001548_0008_m_000000_0' to file:/home/fabrice/workspace/sparkexamples/gradle.template/spark-warehouse/mytable/_temporary/0/task_20190313001548_0008_m_000000
+00:15:48.569 [Executor task launch worker for task 8] INFO  o.a.s.mapred.SparkHadoopMapRedUtil - attempt_20190313001548_0008_m_000000_0: Committed
+00:15:48.570 [Executor task launch worker for task 8] INFO  org.apache.spark.executor.Executor - Finished task 0.0 in stage 8.0 (TID 8). 2126 bytes result sent to driver
+00:15:48.571 [task-result-getter-0] INFO  o.a.spark.scheduler.TaskSetManager - Finished task 0.0 in stage 8.0 (TID 8) in 511 ms on localhost (executor driver) (1/1)
+00:15:48.571 [task-result-getter-0] INFO  o.a.s.scheduler.TaskSchedulerImpl - Removed TaskSet 8.0, whose tasks have all completed, from pool 
+00:15:48.572 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - ResultStage 8 (saveAsTable at SparkInit.java:59) finished in 0.526 s
+00:15:48.572 [main] INFO  o.a.spark.scheduler.DAGScheduler - Job 6 finished: saveAsTable at SparkInit.java:59, took 0.528610 s
+00:15:48.579 [main] INFO  o.a.s.s.e.d.FileFormatWriter - Write Job 85c6cc49-b57a-4474-bd2d-6c646025499a committed.
+00:15:48.579 [main] INFO  o.a.s.s.e.d.FileFormatWriter - Finished processing stats for write job 85c6cc49-b57a-4474-bd2d-6c646025499a.
+00:15:48.585 [main] INFO  o.a.h.hive.metastore.HiveMetaStore - 0: get_database: default
+00:15:48.585 [main] INFO  o.a.h.h.m.HiveMetaStore.audit - ugi=fabrice	ip=unknown-ip-addr	cmd=get_database: default	
+00:15:48.587 [main] INFO  o.a.h.hive.metastore.HiveMetaStore - 0: get_table : db=default tbl=mytable
+00:15:48.587 [main] INFO  o.a.h.h.m.HiveMetaStore.audit - ugi=fabrice	ip=unknown-ip-addr	cmd=get_table : db=default tbl=mytable	
+00:15:48.588 [main] INFO  o.a.h.hive.metastore.HiveMetaStore - 0: get_database: default
+00:15:48.588 [main] INFO  o.a.h.h.m.HiveMetaStore.audit - ugi=fabrice	ip=unknown-ip-addr	cmd=get_database: default	
+00:15:48.589 [main] INFO  o.a.h.hive.metastore.HiveMetaStore - 0: get_table : db=default tbl=mytable
+00:15:48.589 [main] INFO  o.a.h.h.m.HiveMetaStore.audit - ugi=fabrice	ip=unknown-ip-addr	cmd=get_table : db=default tbl=mytable	
+00:15:48.594 [main] INFO  o.a.s.sql.hive.HiveExternalCatalog - Persisting file based data source table `default`.`mytable` into Hive metastore in Hive compatible format.
+00:15:48.613 [main] INFO  o.a.h.hive.metastore.HiveMetaStore - 0: create_table: Table(tableName:mytable, dbName:default, owner:fabrice, createTime:1552432547, lastAccessTime:0, retention:0, sd:StorageDescriptor(cols:[FieldSchema(name:EMP_TYPE, type:string, comment:null), FieldSchema(name:id, type:bigint, comment:null), FieldSchema(name:ville, type:string, comment:null), FieldSchema(name:state, type:string, comment:null), FieldSchema(name:rue, type:string, comment:null), FieldSchema(name:zip, type:string, comment:null), FieldSchema(name:age, type:int, comment:null), FieldSchema(name:COMM, type:string, comment:null), FieldSchema(name:dob, type:date, comment:null), FieldSchema(name:employeeType, type:string, comment:null), FieldSchema(name:first_name, type:string, comment:null), FieldSchema(name:name, type:string, comment:null), FieldSchema(name:PHONE, type:string, comment:null), FieldSchema(name:PIC, type:binary, comment:null), FieldSchema(name:startDate, type:date, comment:null), FieldSchema(name:dept_id, type:bigint, comment:null)], location:null, inputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat, outputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat, compressed:false, numBuckets:-1, serdeInfo:SerDeInfo(name:null, serializationLib:org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, parameters:{path=file:/home/fabrice/workspace/sparkexamples/gradle.template/spark-warehouse/mytable, serialization.format=1}), bucketCols:[], sortCols:[], parameters:{}, skewedInfo:SkewedInfo(skewedColNames:[], skewedColValues:[], skewedColValueLocationMaps:{})), partitionKeys:[], parameters:{spark.sql.sources.schema.part.0={"type":"struct","fields":[{"name":"EMP_TYPE","type":"string","nullable":true,"metadata":{}},{"name":"id","type":"long","nullable":true,"metadata":{}},{"name":"ville","type":"string","nullable":true,"metadata":{}},{"name":"state","type":"string","nullable":true,"metadata":{}},{"name":"rue","type":"string","nullable":true,"metadata":{}},{"name":"zip","type":"string","nullable":true,"metadata":{}},{"name":"age","type":"integer","nullable":true,"metadata":{}},{"name":"COMM","type":"string","nullable":true,"metadata":{}},{"name":"dob","type":"date","nullable":true,"metadata":{}},{"name":"employeeType","type":"string","nullable":true,"metadata":{}},{"name":"first_name","type":"string","nullable":true,"metadata":{}},{"name":"name","type":"string","nullable":true,"metadata":{}},{"name":"PHONE","type":"string","nullable":true,"metadata":{}},{"name":"PIC","type":"binary","nullable":true,"metadata":{}},{"name":"startDate","type":"date","nullable":true,"metadata":{}},{"name":"dept_id","type":"long","nullable":true,"metadata":{}}]}, spark.sql.sources.schema.numParts=1, spark.sql.sources.provider=parquet, spark.sql.create.version=2.4.0}, viewOriginalText:null, viewExpandedText:null, tableType:MANAGED_TABLE, privileges:PrincipalPrivilegeSet(userPrivileges:{}, groupPrivileges:null, rolePrivileges:null))
+00:15:48.613 [main] INFO  o.a.h.h.m.HiveMetaStore.audit - ugi=fabrice	ip=unknown-ip-addr	cmd=create_table: Table(tableName:mytable, dbName:default, owner:fabrice, createTime:1552432547, lastAccessTime:0, retention:0, sd:StorageDescriptor(cols:[FieldSchema(name:EMP_TYPE, type:string, comment:null), FieldSchema(name:id, type:bigint, comment:null), FieldSchema(name:ville, type:string, comment:null), FieldSchema(name:state, type:string, comment:null), FieldSchema(name:rue, type:string, comment:null), FieldSchema(name:zip, type:string, comment:null), FieldSchema(name:age, type:int, comment:null), FieldSchema(name:COMM, type:string, comment:null), FieldSchema(name:dob, type:date, comment:null), FieldSchema(name:employeeType, type:string, comment:null), FieldSchema(name:first_name, type:string, comment:null), FieldSchema(name:name, type:string, comment:null), FieldSchema(name:PHONE, type:string, comment:null), FieldSchema(name:PIC, type:binary, comment:null), FieldSchema(name:startDate, type:date, comment:null), FieldSchema(name:dept_id, type:bigint, comment:null)], location:null, inputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat, outputFormat:org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat, compressed:false, numBuckets:-1, serdeInfo:SerDeInfo(name:null, serializationLib:org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe, parameters:{path=file:/home/fabrice/workspace/sparkexamples/gradle.template/spark-warehouse/mytable, serialization.format=1}), bucketCols:[], sortCols:[], parameters:{}, skewedInfo:SkewedInfo(skewedColNames:[], skewedColValues:[], skewedColValueLocationMaps:{})), partitionKeys:[], parameters:{spark.sql.sources.schema.part.0={"type":"struct","fields":[{"name":"EMP_TYPE","type":"string","nullable":true,"metadata":{}},{"name":"id","type":"long","nullable":true,"metadata":{}},{"name":"ville","type":"string","nullable":true,"metadata":{}},{"name":"state","type":"string","nullable":true,"metadata":{}},{"name":"rue","type":"string","nullable":true,"metadata":{}},{"name":"zip","type":"string","nullable":true,"metadata":{}},{"name":"age","type":"integer","nullable":true,"metadata":{}},{"name":"COMM","type":"string","nullable":true,"metadata":{}},{"name":"dob","type":"date","nullable":true,"metadata":{}},{"name":"employeeType","type":"string","nullable":true,"metadata":{}},{"name":"first_name","type":"string","nullable":true,"metadata":{}},{"name":"name","type":"string","nullable":true,"metadata":{}},{"name":"PHONE","type":"string","nullable":true,"metadata":{}},{"name":"PIC","type":"binary","nullable":true,"metadata":{}},{"name":"startDate","type":"date","nullable":true,"metadata":{}},{"name":"dept_id","type":"long","nullable":true,"metadata":{}}]}, spark.sql.sources.schema.numParts=1, spark.sql.sources.provider=parquet, spark.sql.create.version=2.4.0}, viewOriginalText:null, viewExpandedText:null, tableType:MANAGED_TABLE, privileges:PrincipalPrivilegeSet(userPrivileges:{}, groupPrivileges:null, rolePrivileges:null))	
+00:15:48.616 [main] INFO  hive.log - Updating table stats fast for mytable
+00:15:48.616 [main] INFO  hive.log - Updated size of table mytable to 3274
+00:15:48.652 [main] INFO  o.a.h.hive.metastore.HiveMetaStore - 0: get_table : db=default tbl=mytable
+00:15:48.652 [main] INFO  o.a.h.h.m.HiveMetaStore.audit - ugi=fabrice	ip=unknown-ip-addr	cmd=get_table : db=default tbl=mytable	
+00:15:48.709 [main] INFO  o.a.s.s.e.d.FileSourceStrategy - Pruning directories with: 
+00:15:48.709 [main] INFO  o.a.s.s.e.d.FileSourceStrategy - Post-Scan Filters: 
+00:15:48.710 [main] INFO  o.a.s.s.e.d.FileSourceStrategy - Output Data Schema: struct<>
+00:15:48.710 [main] INFO  o.a.s.s.execution.FileSourceScanExec - Pushed Filters: 
+00:15:48.733 [main] INFO  o.a.s.s.c.e.codegen.CodeGenerator - Code generated in 12.435373 ms
+00:15:48.736 [main] INFO  o.a.spark.storage.memory.MemoryStore - Block broadcast_13 stored as values in memory (estimated size 225.4 KB, free 1929.5 MB)
+00:15:48.742 [main] INFO  o.a.spark.storage.memory.MemoryStore - Block broadcast_13_piece0 stored as bytes in memory (estimated size 21.1 KB, free 1929.5 MB)
+00:15:48.743 [dispatcher-event-loop-5] INFO  o.a.spark.storage.BlockManagerInfo - Added broadcast_13_piece0 in memory on 192.168.1.67:38259 (size: 21.1 KB, free: 1929.8 MB)
+00:15:48.743 [main] INFO  org.apache.spark.SparkContext - Created broadcast 13 from count at SparkInit.java:61
+00:15:48.746 [main] INFO  o.a.s.s.execution.FileSourceScanExec - Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+00:15:48.759 [main] INFO  org.apache.spark.SparkContext - Starting job: count at SparkInit.java:61
+00:15:48.760 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - Registering RDD 34 (count at SparkInit.java:61)
+00:15:48.760 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - Got job 7 (count at SparkInit.java:61) with 1 output partitions
+00:15:48.760 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - Final stage: ResultStage 10 (count at SparkInit.java:61)
+00:15:48.760 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - Parents of final stage: List(ShuffleMapStage 9)
+00:15:48.760 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - Missing parents: List(ShuffleMapStage 9)
+00:15:48.761 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - Submitting ShuffleMapStage 9 (MapPartitionsRDD[34] at count at SparkInit.java:61), which has no missing parents
+00:15:48.769 [dag-scheduler-event-loop] INFO  o.a.spark.storage.memory.MemoryStore - Block broadcast_14 stored as values in memory (estimated size 11.9 KB, free 1929.5 MB)
+00:15:48.771 [dag-scheduler-event-loop] INFO  o.a.spark.storage.memory.MemoryStore - Block broadcast_14_piece0 stored as bytes in memory (estimated size 5.8 KB, free 1929.5 MB)
+00:15:48.771 [dispatcher-event-loop-4] INFO  o.a.spark.storage.BlockManagerInfo - Added broadcast_14_piece0 in memory on 192.168.1.67:38259 (size: 5.8 KB, free: 1929.8 MB)
+00:15:48.772 [dag-scheduler-event-loop] INFO  org.apache.spark.SparkContext - Created broadcast 14 from broadcast at DAGScheduler.scala:1161
+00:15:48.772 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - Submitting 1 missing tasks from ShuffleMapStage 9 (MapPartitionsRDD[34] at count at SparkInit.java:61) (first 15 tasks are for partitions Vector(0))
+00:15:48.772 [dag-scheduler-event-loop] INFO  o.a.s.scheduler.TaskSchedulerImpl - Adding task set 9.0 with 1 tasks
+00:15:48.773 [dispatcher-event-loop-6] INFO  o.a.spark.scheduler.TaskSetManager - Starting task 0.0 in stage 9.0 (TID 9, localhost, executor driver, partition 0, PROCESS_LOCAL, 7898 bytes)
+00:15:48.774 [Executor task launch worker for task 9] INFO  org.apache.spark.executor.Executor - Running task 0.0 in stage 9.0 (TID 9)
+00:15:48.785 [Executor task launch worker for task 9] INFO  o.a.s.s.e.datasources.FileScanRDD - Reading File path: file:///home/fabrice/workspace/sparkexamples/gradle.template/spark-warehouse/mytable/part-00000-521d2147-856c-47d5-8c81-96931becbf24-c000.snappy.parquet, range: 0-3274, partition values: [empty row]
+00:15:48.839 [Executor task launch worker for task 9] INFO  org.apache.spark.executor.Executor - Finished task 0.0 in stage 9.0 (TID 9). 1646 bytes result sent to driver
+00:15:48.839 [task-result-getter-1] INFO  o.a.spark.scheduler.TaskSetManager - Finished task 0.0 in stage 9.0 (TID 9) in 66 ms on localhost (executor driver) (1/1)
+00:15:48.840 [task-result-getter-1] INFO  o.a.s.scheduler.TaskSchedulerImpl - Removed TaskSet 9.0, whose tasks have all completed, from pool 
+00:15:48.840 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - ShuffleMapStage 9 (count at SparkInit.java:61) finished in 0.078 s
+00:15:48.841 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - looking for newly runnable stages
+00:15:48.841 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - running: Set()
+00:15:48.841 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - waiting: Set(ResultStage 10)
+00:15:48.841 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - failed: Set()
+00:15:48.841 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - Submitting ResultStage 10 (MapPartitionsRDD[37] at count at SparkInit.java:61), which has no missing parents
+00:15:48.843 [dag-scheduler-event-loop] INFO  o.a.spark.storage.memory.MemoryStore - Block broadcast_15 stored as values in memory (estimated size 8.5 KB, free 1929.4 MB)
+00:15:48.845 [dag-scheduler-event-loop] INFO  o.a.spark.storage.memory.MemoryStore - Block broadcast_15_piece0 stored as bytes in memory (estimated size 4.4 KB, free 1929.4 MB)
+00:15:48.846 [dispatcher-event-loop-2] INFO  o.a.spark.storage.BlockManagerInfo - Added broadcast_15_piece0 in memory on 192.168.1.67:38259 (size: 4.4 KB, free: 1929.8 MB)
+00:15:48.846 [dag-scheduler-event-loop] INFO  org.apache.spark.SparkContext - Created broadcast 15 from broadcast at DAGScheduler.scala:1161
+00:15:48.847 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - Submitting 1 missing tasks from ResultStage 10 (MapPartitionsRDD[37] at count at SparkInit.java:61) (first 15 tasks are for partitions Vector(0))
+00:15:48.847 [dag-scheduler-event-loop] INFO  o.a.s.scheduler.TaskSchedulerImpl - Adding task set 10.0 with 1 tasks
+00:15:48.848 [dispatcher-event-loop-7] INFO  o.a.spark.scheduler.TaskSetManager - Starting task 0.0 in stage 10.0 (TID 10, localhost, executor driver, partition 0, ANY, 7246 bytes)
+00:15:48.848 [Executor task launch worker for task 10] INFO  org.apache.spark.executor.Executor - Running task 0.0 in stage 10.0 (TID 10)
+00:15:48.851 [Executor task launch worker for task 10] INFO  o.a.s.s.ShuffleBlockFetcherIterator - Getting 1 non-empty blocks including 1 local blocks and 0 remote blocks
+00:15:48.851 [Executor task launch worker for task 10] INFO  o.a.s.s.ShuffleBlockFetcherIterator - Started 0 remote fetches in 0 ms
+00:15:48.853 [Executor task launch worker for task 10] INFO  org.apache.spark.executor.Executor - Finished task 0.0 in stage 10.0 (TID 10). 1749 bytes result sent to driver
+00:15:48.853 [task-result-getter-2] INFO  o.a.spark.scheduler.TaskSetManager - Finished task 0.0 in stage 10.0 (TID 10) in 5 ms on localhost (executor driver) (1/1)
+00:15:48.853 [task-result-getter-2] INFO  o.a.s.scheduler.TaskSchedulerImpl - Removed TaskSet 10.0, whose tasks have all completed, from pool 
+00:15:48.854 [dag-scheduler-event-loop] INFO  o.a.spark.scheduler.DAGScheduler - ResultStage 10 (count at SparkInit.java:61) finished in 0.012 s
+00:15:48.855 [main] INFO  o.a.spark.scheduler.DAGScheduler - Job 7 finished: count at SparkInit.java:61, took 0.095986 s
+00:15:48.856 [main] INFO  com.spark.examples.gradle.SparkInit - record number in hive table :4
+00:15:48.860 [Thread-2] INFO  org.apache.spark.SparkContext - Invoking stop() from shutdown hook
+00:15:48.866 [Thread-2] INFO  o.s.jetty.server.AbstractConnector - Stopped Spark@7af5d740{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+00:15:48.867 [Thread-2] INFO  org.apache.spark.ui.SparkUI - Stopped Spark web UI at http://192.168.1.67:4040
+00:15:48.880 [dispatcher-event-loop-0] INFO  o.a.s.MapOutputTrackerMasterEndpoint - MapOutputTrackerMasterEndpoint stopped!
+00:15:48.892 [Thread-2] INFO  o.a.spark.storage.memory.MemoryStore - MemoryStore cleared
+00:15:48.893 [Thread-2] INFO  o.apache.spark.storage.BlockManager - BlockManager stopped
+00:15:48.894 [Thread-2] INFO  o.a.spark.storage.BlockManagerMaster - BlockManagerMaster stopped
+00:15:48.897 [dispatcher-event-loop-5] INFO  o.a.s.s.OutputCommitCoordinator$OutputCommitCoordinatorEndpoint - OutputCommitCoordinator stopped!
+00:15:48.914 [Thread-2] INFO  org.apache.spark.SparkContext - Successfully stopped SparkContext
+00:15:48.915 [Thread-2] INFO  o.a.spark.util.ShutdownHookManager - Shutdown hook called
+00:15:48.915 [Thread-2] INFO  o.a.spark.util.ShutdownHookManager - Deleting directory /tmp/spark-78ab5006-3e53-4b5f-806e-b3d52e411717

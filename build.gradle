@@ -1,0 +1,35 @@
+group 'com.example.spark'
+version '1.0'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.13'
+
+    compile group: 'org.apache.spark', name: 'spark-hive_2.12', version: '2.4.0'
+    compile group: 'org.apache.spark', name: 'spark-sql_2.12', version: '2.4.0'
+    compile group: 'org.apache.spark', name: 'spark-core_2.12', version: '2.4.0'
+
+    //For Logger
+    compile group: 'org.slf4j', name:'slf4j-api', version: '1.7.2'
+    compile group: 'ch.qos.logback', name:'logback-classic', version: '1.0.9'
+    compile group: 'ch.qos.logback', name:'logback-core', version: '1.0.9'
+
+}
+
+task customFatJar(type: Jar) {
+    manifest {
+        attributes 'Main-Class': 'com.spark.examples.SparkInit'
+    }
+    baseName = 'all-in-one-jar'
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    zip64 true
+    with jar
+}
